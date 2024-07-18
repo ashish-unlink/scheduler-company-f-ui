@@ -1,0 +1,37 @@
+
+.custom-table-header{
+  background-color: #7469B6;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.custom-table-header:focus{
+  border-color: rgba(224, 224, 224, 1) !important;
+  outline: none !important;
+}
+
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiDataGrid-iconSeparator {
+  display: none;
+}
+
+.table-header{
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700 !important;
+  text-align: center;
+  /* min-width: 20%; */
+}
+          
+.MuiDataGrid-columnHeaderCheckbox{
+  /* display: none !important; */
+  visibility: hidden !important;
+}
+
+.MuiDataGrid-cell:focus{
+  outline: none !important;
+}
+
+.MuiDataGrid-cell{
+  border-bottom:none !important;
+}

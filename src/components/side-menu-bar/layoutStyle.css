@@ -1,0 +1,94 @@
+.logo-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger {
+  height: 4.5rem;
+  width: 4.88rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+hr{
+  border-color: rgb(209 209 209 / 12%)
+}
+.hamburger img {
+  width: 2rem;
+}
+
+.scheduler-toolbar {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.scheduler-toolbar-right-section {
+  display: flex;
+  gap: 20px;
+}
+
+.lang-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+.search-icons-sidebar {
+  width: 18px;
+  height: 18px;
+  margin-top: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+
+.search-popup {
+  position: relative;
+  display: flex;
+  gap: 30px;
+  margin: 15px;
+  justify-content: space-between;
+
+}
+
+.log-out-wrap {
+  margin: 10px 0px;
+  /* padding-left: 10px;
+  padding-right: 10px; */
+}
+
+.language-item {
+  border-bottom: 1px solid #DADADA;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+}
+
+.language-item:last-of-type {
+  border-bottom: none;
+
+}
+
+li.menu-item svg {
+  font-size: 1.2em;
+  margin: 0 auto;
+  min-width: 2em;
+}
+
+.header-menu-items {
+  padding: 0px 15px 5px;
+}
+
+
+.setting-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.setting{
+  border-bottom: 1px solid #e8e2e2;
+  cursor: pointer;
+}

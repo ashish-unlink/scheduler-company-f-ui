@@ -1,0 +1,45 @@
+.profile-icon {
+  background: #AD88C6;
+  border-radius: 50%;
+  padding: 2px 4px;
+  color: white;
+}
+
+.profile-icon svg {
+  font-size: 1.3em;
+}
+
+.profile-name {
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.keyboard-down-arrow-icon {
+  color: #ffffff;
+}
+
+.logout-button {
+  font-weight: 700;
+}
+
+span.MuiButtonBase-root.MuiCheckbox-root.Mui-checked {
+  color: #AD88C6 !important;
+}
+
+.language-item {
+  cursor: pointer;
+}
+
+.menu-list {
+  position: relative !important;
+  height: 100%;
+}
+
+.tour-button {
+  position: absolute;
+  bottom: 20px;
+  left: 0px;
+}
+

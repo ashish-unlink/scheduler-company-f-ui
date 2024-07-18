@@ -1,0 +1,60 @@
+.scheduler-container {
+    height: 80vh;
+    overflow: hidden;
+    /* overflow-y: scroll; */
+    padding: 10px 10px;
+    width: 82%;
+}
+
+
+/* .paper-wrap{
+  background-color:#5ac8fa ;
+}  */
+
+.calender-wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: calc(100vw - 120px);
+    background-color: #fff;
+}
+/* @media screen and (max-width: 991px) {
+    .calender-wrap {
+        width: calc(100% - 59%);
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .calender-wrap {
+        width: calc(100% - 18%);
+    }
+} */
+
+
+.side-calender {
+    width: 21%;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* border-right: 1px solid #7469B6; */
+    height: 85vh;
+}
+
+.add-appointment {
+    background: none;
+    border: 1px solid #AD88C6;
+    border-radius: 8px;
+    padding: 5px 20px;
+    color: #AD88C6;
+    font-weight: 900;
+    cursor: pointer;
+    height: 40px;
+    margin-top: 10px;
+    width: 100%;
+    text-transform: uppercase;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.add-appointment:hover {
+    background: #AD88C6;
+    color: white;
+}

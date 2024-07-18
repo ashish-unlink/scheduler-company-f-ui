@@ -1,0 +1,86 @@
+/* .calender-container .calender-table-wrap {
+    background-color: #fff;
+    padding: 15px;
+    width: 100%;
+} */
+
+.attendence-table-header {
+    text-transform: uppercase;
+    margin-top: 3px !important;
+    font-weight: 700 !important;
+}
+.attendence-table-header {
+    background: #7469B6 !important;
+    color: #fff !important;
+  }
+
+.employee-status {
+    text-transform: capitalize;
+}
+
+.attendence-update-btn {
+    margin: 5px 15px 5px 0px;
+}
+
+.attendence-update-btn>button {
+    color: #AD88C6;
+    border-color: #AD88C6;
+    font-weight: 700;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.attendence-update-btn>button:hover {
+    border-color: #AD88C6;
+}
+
+.attendence-table-cell {
+    text-transform: capitalize;
+}
+
+.attendence-table-header .MuiDataGrid-columnHeaderTitle {
+    font-weight: 600 !important;
+}
+
+
+.present {
+    padding: 6px 30px 4px;
+    border-radius: 55px;
+    background-color: rgb(241, 255, 241);
+    color: rgb(44, 129, 13);
+    border: 1px solid;
+    text-transform: uppercase;
+    width: auto;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: .04rem;
+    font-size: .75rem;
+}
+li.MuiListItem-root.MuiListItem-gutters.menu-item.active .MuiListItemIcon-root::before {
+    background: #fff;
+    position: absolute;
+    top: 3px;
+    padding: 4px 0px;
+    border-radius: 4px;
+    content: "";
+    left: 20px;
+    width: 36px;
+    height: 36px;
+    z-index: -1;
+}
+.leave {
+    background-color: rgb(255 239 236);
+    color: rgb(240, 56, 14);
+    border: 1px solid;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .04rem;
+    padding: 6px 30px 4px;
+    text-align: center;
+    border-radius: 35px;
+    width: auto;
+    font-size: .75rem;
+}
+
+.attendence-left-container-wrap{
+    width: 20%;
+}

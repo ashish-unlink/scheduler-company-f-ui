@@ -1,0 +1,26 @@
+.staff-member-list {
+    margin-top: 10px !important;
+    margin-bottom: 20px !important;
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+}
+
+.list-item-text {
+    font-weight: 700 !important;
+    font-family: "Kumbh Sans", sans-serif !important;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.color-text {
+    color: #ffa500;
+}
+
+.list-item {
+    border-bottom: 1px solid #c7c4c4 !important;
+}
+
+
+.list-item:last-of-type {
+    border-bottom: none !important;
+}

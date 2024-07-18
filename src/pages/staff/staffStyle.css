@@ -1,0 +1,20 @@
+.contained-staff-btn {
+  background-color: #061f2d !important;
+  box-shadow: none !important;
+  font-size: 13px;
+  font-weight: 600 !important;
+  font-family: "Work Sans", sans-serif !important;
+  width: 10%;
+}
+
+.staff-btn {
+  margin: 5px 15px 5px 0px;
+}
+
+.tab-text{
+  font-family: "Work Sans", sans-serif !important;
+  text-transform: uppercase;
+  color: #061f2d;
+  padding-left: 20px;
+  font-weight: 700;
+}

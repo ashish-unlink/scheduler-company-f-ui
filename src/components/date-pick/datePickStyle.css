@@ -1,0 +1,28 @@
+.dob-label {
+    color: rgba(0, 0, 0, 0.87);
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+}
+
+.dob-container {
+    width: 100%;
+
+}
+.search-popup .dob-container fieldset {
+    border-color: #DADADA !important;
+}
+.search-popup .dob-container input{
+    border-color: #DADADA !important;
+   color:#DADADA;
+}
+
+.error-text {
+    margin-top: 2px !important;
+    margin-bottom: 0px !important;
+    font-size: 16px;
+    font-weight: 500;
+    color: red;
+}

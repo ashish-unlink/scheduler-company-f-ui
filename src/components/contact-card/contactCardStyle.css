@@ -1,0 +1,36 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 280px;
+    margin: 0 auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-left: -40px;
+    padding-left: 20px;
+
+}
+/* .card-header {
+  background-color: orange;
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.card-name {
+  margin:0;
+  color: #fff;
+
+} */
+
+.card-heading{
+  margin-bottom: 0px !important;
+}
+.card-text{
+  margin-top: 0px !important;
+  font-size: 14px;
+}

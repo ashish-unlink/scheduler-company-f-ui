@@ -1,0 +1,303 @@
+.common-appointment-popup-2-section {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  justify-content: flex-start;
+  padding: 2px 0px 2px 0;
+  gap: 1rem;
+  height: calc(100vh - 58px);
+}
+
+.customer-search-section {
+  padding: 0 30px;
+}
+
+.not-found {
+  width: 80%;
+}
+
+.date-picker-div {
+  border: 1px solid rgb(196, 194, 194);
+  border-radius: 3px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.appointment-popup-fields-div {
+  display: flex;
+}
+
+.border-right {
+  border-right: 1px solid #d4d4d4;
+  margin-right: 1rem;
+}
+
+.appointment-flex {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px 20px 0;
+}
+
+.add-button {
+  width: 3rem;
+  height: 3rem;
+  margin-top: 1.6rem;
+}
+
+.total-amount {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: red;
+}
+
+button:disabled {
+  background: #dddddd;
+  border: gray;
+  color: gray;
+}
+
+button:disabled:hover {
+  background: #dddddd;
+  border: gray;
+  color: gray;
+}
+
+.submit-div {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.service-table {
+  height: 30vh;
+  overflow: hidden;
+  overflow-y: auto;
+  margin-top: 1rem;
+}
+
+.mt-3 {
+  margin-top: 1.5rem;
+
+}
+
+.mt-3-add {
+  width: 35px;
+}
+
+.selected-user-detail {
+  /* display :flex; */
+}
+
+.profile-wrap {
+  padding-top: 20px;
+}
+
+.profile-box-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-box {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 15px;
+  padding: 5px 32px;
+  position: relative;
+}
+
+.profile-text {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  text-transform: capitalize;
+}
+
+.profile-box p.profile-text {
+  font-size: .85rem !important;
+}
+
+.profile-user {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.close-btn {
+  border: none;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.appointment-inputs-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.add-new {
+  background: #AD88C6;
+  border: 2px solid #AD88C6;
+  border-radius: 6px;
+  padding: 5px 10px;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  height: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 30px !important;
+}
+
+.add-new:hover {
+  background: #7469B6;
+  color: white;
+}
+
+.customer-image {
+  border: 1px solid #AD88C6;
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-profile-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px 20px 0;
+}
+
+button.orange-button.button.add-new-customer-button {
+  background: #AD88C6;
+  padding: 10px 10px;
+  text-transform: uppercase;
+  border: 1.5px solid #AD88C6;
+  color: #ffffff;
+  width: 210px;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  font-weight: 700;
+
+}
+
+.date-picker-modal {
+  position: relative;
+  top: 5px;
+}
+
+.date-picker-modal fieldset {
+  border: 0;
+}
+
+.date-picker-modal fieldset:hover, .date-picker-modal fieldset:focus, .date-picker-modal fieldset:focus-visible {
+  border: 0;
+  outline: 0;
+}
+
+.date-picker-modal input {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #AD88C6;
+  padding: 0 0 0 20px;
+  margin: 0 0 0 20px;
+}
+
+.date-picker-modal button {
+  position: absolute;
+  left: 0;
+}
+
+.date-picker-modal button svg {
+  color: #AD88C6;
+}
+
+.common-appointment-popup-2-section .dob-container {
+  width: 100%;
+  background: #AD88C6 !important;
+  position: relative;
+  margin: -3px 0px -10px 0px;
+  padding: 1px 20px;
+  left: 0px;
+  display: block;
+}
+
+.common-appointment-popup-2-section .dob-container fieldset {
+  border: 0;
+}
+
+.common-appointment-popup-2-section .dob-container input {
+  font-size: 1em;
+  font-weight: 500;
+  color: #fff;
+}
+
+.common-appointment-popup-2-section .dob-container label {
+  display: none;
+}
+
+.common-appointment-popup-2-section .dob-container button svg {
+  color: #fff;
+}
+
+.comments-wrap {
+  height: 30vh;
+  overflow-y: auto;
+}
+
+.status-view-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.comment-date{
+  margin-left: 10px;
+}
+.profile-box .user-status {
+  position: absolute;
+  top: -60px;
+  padding: 2px 10px;
+  font-size: .7rem;
+}
+.profile-box .refresh-wrap {
+  position: absolute;
+  right: 51px;
+  top: -34px;
+}
+.appoint-form-select-box .MuiFormControl-root {
+  position: relative;
+  top: 4px;
+}
+.customer-search-section .MuiInputAdornment-root img {
+  left: 8px;
+  position: relative;
+  width: 15px;
+  height: auto;
+}
+.customer-search-section .MuiInputBase-root input {
+  font-size: .85rem;
+}

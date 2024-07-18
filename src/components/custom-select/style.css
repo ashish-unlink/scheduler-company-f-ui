@@ -1,0 +1,8 @@
+.select-therapist-div{
+    position: relative;
+}
+.select-therapist-label{
+    position: absolute;
+    top: 5;
+    left: 5;
+}

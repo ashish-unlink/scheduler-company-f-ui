@@ -1,0 +1,48 @@
+.payment-btn-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    gap: 20px;
+}
+.wrap-payment-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 30%;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    margin-left: auto;
+    padding-right: 30px;
+  }
+  
+  .wrap-counts{
+    width: 100%;
+    float: right;
+    gap:10px;
+    margin-left: auto;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .wrap-counts p{
+    font-weight: 500;
+    font-size: large;
+  }
+  
+  .sent_payment_btn{
+    background-color: #FF9800 !important;
+    margin-top: 20px !important;
+  }
+  
+  .delete-align{
+    margin: 0 auto;
+  }
+
+  .wrap-table{
+    overflow-y: scroll;
+    height: 89vh;
+    padding: 20px 20px;
+  }

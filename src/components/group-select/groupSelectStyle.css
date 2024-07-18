@@ -1,0 +1,19 @@
+.option-grp{
+    font-weight: 700 !important;
+    color: #000 !important;
+}
+
+
+.menu-option-text{
+    text-transform: capitalize !important;
+    padding-left: 30px !important;
+}
+
+.error-text {
+    margin-top: 5px !important;
+    margin-bottom: 0px !important;
+    font-size: 14px;
+    font-weight: 500;
+    color: red;
+  }
+  

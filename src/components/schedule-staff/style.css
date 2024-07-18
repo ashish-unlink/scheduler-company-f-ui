@@ -1,0 +1,57 @@
+.grp-time-range {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin-top: 15px;
+}
+.grp-date-range{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: flex-end;
+    margin-top: 15px;
+    width: 94%;
+}
+
+.time-picker-wrap {
+    padding: 20px 40px 40px;
+}
+
+.grp-label-time-range {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.shift-title {
+    margin-right: 10px;
+}
+
+.label-text {
+    width: 47%;
+    font-weight: 600;
+}
+
+.floating-btn-wrap{
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.shift-text{
+    color: #FF9800;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.copy-shift-checkbox-wrap{
+    display: flex;
+    align-items: center;
+    gap: 0px;
+}

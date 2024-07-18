@@ -1,0 +1,107 @@
+.wrapper {
+  position: relative;
+}
+
+.heading {
+  margin: 25px 0;
+  font-size: 24px;
+}
+
+.dashboard-stat {
+  position: relative;
+  display: block;
+  margin: 0 0 25px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.dashboard-stat .visual {
+  width: 80px;
+  height: 80px;
+  display: block;
+  float: left;
+  padding-top: 10px;
+  padding-left: 15px;
+  margin-bottom: 15px;
+  font-size: 35px;
+  line-height: 35px;
+}
+
+.dashboard-stat .visual>i {
+  margin-left: -15px;
+  font-size: 110px;
+  line-height: 110px;
+  color: #fff;
+  opacity: 0.1;
+}
+
+.dashboard-stat .details {
+  position: absolute;
+  right: 15px;
+  padding-right: 15px;
+  color: #474646;
+}
+
+.dashboard-stat .details .number {
+  padding-top: 25px;
+  text-align: right;
+  font-size: 34px;
+  line-height: 36px;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  font-weight: 300;
+}
+
+.dashboard-stat .details .number .desc {
+  text-transform: capitalize;
+  text-align: right;
+  font-size: 16px;
+  letter-spacing: 0;
+  font-weight: 300;
+}
+
+.dashboard-stat.blue {
+  background-color: #cfe2f2;
+}
+
+.dashboard-stat.red {
+  background-color: #ffc9cd;
+}
+
+.dashboard-stat.green {
+  background-color: #d9fcef;
+}
+
+.dashboard-stat.orange {
+  background-color: #ffe9bd;
+}
+
+.stats-wrap {
+  position: relative;
+  display: flex;
+  gap: 20px;
+}
+
+.stats-list {
+  width: 25%;
+}
+
+.stats-list svg {
+  color: #000;
+  opacity: 0.4;
+  font-size: 1.5em;
+}
+
+.dashboard-stat .details .number span {
+  color: #000;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.stats-heading-wrap {
+  display: block;
+  margin: 0 0 25px 0;
+}
+
+.no-data-appointment {
+  text-align: center;
+}

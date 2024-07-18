@@ -1,0 +1,63 @@
+@media only screen and (min-width: 1920px) and (max-width: 2560px) {
+    .wrap-services-staff-list{
+        max-height: 35vh;
+    }
+    .wrap-propfile-info-test{
+        width: 33% !important;
+    }
+    .wrap-propfile-info-test:last-child {
+        width: 66% !important;
+    }
+}
+@media screen and  (max-width: 1920px) {
+    .wrap-propfile-info-test{
+        width: 33% !important;
+    }
+}
+@media only screen and (min-width: 1365px) and (max-width: 1640px) {
+    /* .main-auth-wrap.login-wrap .auth-form-container{
+      width: 35%;
+    } */
+    /* .main-auth-wrap.login-wrap .wrapper-logo {
+        width: 65%;
+    } */
+    form.login-form{width: 28vw;}
+    .manage-staff-container, .employee-info-wrap{
+        height: 71vh;
+    }
+    .wrap-propfile-info-test{
+        width: 33% !important;
+    }
+    .wrap-propfile-info-test:last-child {
+        width: 66% !important;
+    }
+    .costumer-desing-details{width: 30%;}
+    .custom-input-label, .container-signup .country-phone-wrap label{
+        font-size: 11.5px !important;
+    }
+    .Container-container {
+        height: 490px !important;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1365px) {
+    /* .main-auth-wrap.login-wrap .auth-form-container{
+      width: 38%;
+    } */
+    /* .main-auth-wrap.login-wrap .wrapper-logo {
+        width: 62%;
+    } */
+    form.login-form{width: 28vw;}
+    form.login-form span.login-your-account {
+        font-size: 21px;
+        display: block;
+    }
+    .custom-input-label{
+        font-size: 12px;
+    }
+    .custom-input-label, .container-signup .country-phone-wrap label{
+        font-size: 11.5px !important;
+    }
+}
+.auth-form-container form {
+    width: 94%;
+}

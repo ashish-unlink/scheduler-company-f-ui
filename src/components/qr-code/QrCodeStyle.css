@@ -1,0 +1,31 @@
+.qr-code-wrap {
+    height: auto;
+    width: 100%;
+    padding: 50px 50px 80px;
+    text-align: center;
+}
+
+.qr-code {
+    display: flex;
+    justify-content: center;
+    height: "auto";
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.qr-btn-wrap {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.qr-btn-wrap button {
+    width: 30%;
+    background-color: #AD88C6 !important;
+}
+
+.qr-btn-wrap button:hover {
+    background-color: #AD88C6 !important;
+}

@@ -1,0 +1,30 @@
+.wrap-category {
+  padding: 20px 30px 32px;
+  overflow-y: scroll;
+}
+
+.btn-div {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.contained-btn {
+  background-color: #AD88C6 !important;
+  box-shadow: none !important;
+  font-size: 13px;
+  font-weight: 600 !important;
+  font-family: "Work Sans", sans-serif !important;
+  width: 90px !important;
+}
+
+.wraped-check-box {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  text-transform: capitalize;
+  margin-top: 10px;
+}

@@ -1,0 +1,37 @@
+.toor-guidance-wrap{
+    padding: 50px 20px 20px 20px;    
+}
+.MuiStepConnector-root.MuiStepConnector-horizontal.MuiStepConnector-alternativeLabel {
+    top: 26px !important;
+}
+p.heading-title {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+span.MuiStepLabel-label.Mui-active p.heading-title {
+    color: #df8111;
+}
+h3.tour-title-context {
+    text-align: center;
+    margin: -15px auto 30px;
+    text-transform: uppercase;
+    letter-spacing: .05rem;
+    font-size: .95rem;
+    color: #000;
+    font-weight: 500;
+}
+h3.tour-title-context strong {
+    font-weight: 900;
+    color: #FF9800;
+}
+.css-ascpo7-MuiStepLabel-root.Mui-disabled {
+    cursor: default;
+    pointer-events: none;
+}
+img.tick-icon-img {
+    width: 100px;
+    margin: 0 auto 30px;
+    text-align: center;
+    display: block;
+    border-radius: 0px;
+}

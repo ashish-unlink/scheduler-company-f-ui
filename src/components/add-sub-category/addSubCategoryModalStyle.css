@@ -1,0 +1,42 @@
+.wrap-sub-category {
+  margin-top: 15px;
+}
+.wrap-sub-category:first-of-type{
+  margin-top: 0px;
+}
+.wrap-all-category{
+  padding: 20px 30px 32px;
+  /* height: 370px; */
+  overflow-y: scroll;
+}
+
+.btn-div {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.contained-btn {
+  background-color: #AD88C6 !important;
+  box-shadow: none !important;
+  font-size: 13px;
+  font-weight: 600 !important;
+  font-family: "Work Sans", sans-serif !important;
+}
+
+.subcategory-checkbox-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0px;
+  width: 100%;
+}
+
+.service-status-text{
+  color: #000;
+  display: flex;
+  border-radius: 6px;
+  justify-content: left;
+  align-items: center;
+}

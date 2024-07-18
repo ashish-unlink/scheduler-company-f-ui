@@ -1,0 +1,16 @@
+.user-container{
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.heading{
+    font-family: "Work Sans", sans-serif;
+    font-size: 32px;
+}
+
+.user-text{
+    font-family: "Work Sans", sans-serif;
+    font-size: 20px;
+    margin-top: 20px;
+}

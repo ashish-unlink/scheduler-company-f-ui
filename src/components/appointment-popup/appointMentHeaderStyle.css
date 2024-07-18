@@ -1,0 +1,111 @@
+.appointment-popup-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #DADADA !important;
+  align-items: flex-start;
+  gap: 1rem;
+  text-transform: uppercase;
+  padding: 12px 32px 8px;
+  height: auto;
+}
+
+.orange-button {
+  background: none;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  border: 1.5px solid #7469B6;
+  color: #7469B6;
+  border-radius: 4px;
+}
+
+.appointment-popup-header button.orange-button.button {
+  position: relative;
+  top: 5px;
+}
+
+.cancel-button {
+  background: none;
+  padding: 5px;
+  border-radius: 4px;
+  border: none;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.appointment-popup-header b {
+  padding: 7px 0;
+}
+
+.appointment-text-field {
+  width: 100%;
+  /* margin-bottom: 10px; */
+}
+
+.appointment-input-label {
+  color: #000;
+  font-weight: 400;
+  /* width:50%; */
+  display: flex;
+  border-radius: 6px;
+  justify-content: left;
+  align-items: center
+}
+
+/* .appointment-popup-header>.appointment-text-field{
+  text-indent: 20px;
+} */
+
+label.input-label {
+  margin-top: 10px;
+  margin: 0px;
+  margin-bottom: -12px;
+}
+
+/* .appointment-text-field-start-adornment {
+  position: absolute;
+  height: 1.2rem;
+  width: 1.2rem;
+  z-index: 1;
+  top: 9px;
+  left: 10px;
+}
+input#outlined-start-adornment {
+ text-indent: 0px;
+}
+
+ .AppointmentTextField{
+display: flex;
+justify-content: center;
+/* border-radius: 6px !important; */
+/* border: 15px solid #DADADA !important; */
+
+.popup-control-form {
+  width: 100%;
+}
+
+
+input#outlined-start-adornment {
+  text-indent: 0px;
+}
+
+.AppointmentTextField {
+  display: flex;
+  justify-content: center;
+  border-radius: 6px 'important';
+  border: 1px solid #DADADA;
+}
+
+.popup-control-form {
+  width: 100%;
+}
+
+.mandatory-field{
+  color: #ffb2b2;
+  padding-left: 3px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.design-country-code:disabled:hover {
+  background: transparent;
+}

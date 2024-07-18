@@ -1,0 +1,190 @@
+.popup-wrapper {
+  position: relative;
+  padding: 0px 0 0px;
+}
+.event-color-c {
+  display: flex;
+  margin: 16px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.event-color-label {
+  flex: 1 0 auto;
+}
+
+.event-color {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  margin-right: 10px;
+  margin-left: 240px;
+  background: #5ac8fa;
+}
+
+.crud-color-row {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+.crud-color-c {
+  padding: 3px;
+  margin: 2px;
+}
+
+.crud-color {
+  position: relative;
+  min-width: 46px;
+  min-height: 46px;
+  margin: 2px;
+  cursor: pointer;
+  border-radius: 23px;
+  background: #5ac8fa;
+}
+
+.crud-color-c.selected,
+.crud-color-c:hover {
+  box-shadow: inset 0 0 0 3px #007bff;
+  border-radius: 48px;
+}
+
+.crud-color:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -10px;
+  color: #f7f7f7;
+  font-size: 20px;
+  text-shadow: 0 0 3px #000;
+  display: none;
+}
+
+.crud-color-c.selected .crud-color:before {
+  display: block;
+}
+
+.appointment-popup-fields-div {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+.common-appointment-popup-section {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  justify-content: flex-start;
+  padding: 2px 20px;
+}
+.scrollable-accordans {
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 75%;
+  margin-top: 1rem;
+}
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.border-right {
+  border-right: 1px solid #d4d4d4;
+}
+.book-an-appointment {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+.Cell-text {
+  color: white !important;
+  padding: 0 !important;
+  font-weight: 500 !important;
+}
+.common-appointment-popup-2-section.border-right p.label-text {
+  margin-top: 6px;
+}
+.MainLayout-stickyElement.MainLayout-leftPanel.MainLayout-dayScaleEmptyCell.MainLayout-ordinaryLeftPanelBorder {
+  background: #7469B6;
+}
+.appointment-tooltip {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* table */
+.tooltip-content {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tooltip-content td,
+th {
+  border: 1px solid #AD88C6;
+  text-align: left;
+  padding: 8px;
+}
+
+.tooltip-content tr:nth-child(odd) {
+  background-color: #AD88C6;
+  color: white;
+}
+
+.appointment-tooltip-wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:10px 0px 10px 25px;
+}
+
+.appointment-tooltip-actions{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.appointment-tooltip-actions > button{
+  color: gray;
+}
+
+.appointment-tooltip-text{
+  text-transform: capitalize;
+  font-weight: 600;
+  color: gray;
+  font-family: "Work Sans", sans-serif;
+}
+td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium.Cell-cell.Cell-brightRightBorder {
+  width: 250px !important;
+}
+
+.done-btn{
+  background-color: #AD88C6 !important;
+  margin-top: 20px !important;
+  width: 20%  !important;
+}
+h4.commision-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+
+.wrap-filters-calender{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.wrap-calender-drop-down{
+  width: 50%;
+}

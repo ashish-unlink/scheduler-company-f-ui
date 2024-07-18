@@ -1,0 +1,70 @@
+    .search-popup-form {
+        height: auto;
+        padding: 0 1em 1.5em;
+    }
+
+    .search-wrap {
+        padding: 20px 30px 32px;
+        position: relative;
+        height: 95vh;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
+
+    .wrap-search-field {
+        display: flex;
+        justify-content: flex-start;
+        gap: 12px;
+        align-items: flex-start;
+        margin-top: 15px;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .search-input-wrap {
+        width: 32.3% !important;
+    }
+
+    .search-form-label-text {
+        font-family: "Work Sans", sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-bottom: 1px solid rgb(233 233 233);
+        padding-bottom: 5px;
+        letter-spacing: .04em;
+        margin-top: 17px;
+        font-size: 15px;
+        color: #020b13;
+        text-shadow: 2px 1px 10px #f9f9f9;
+    }
+
+    .search-form-label-text:first-of-type {
+        margin-top: 0px;
+    }
+    .search-input-wrap label {
+        font-size: .75rem;
+        margin: 0 0 6px 0;
+        font-weight: 600;
+        color: #757575;
+        text-transform: uppercase;
+    }
+    button.contained-btn.reset-search-btn {
+        background: #959191 !important;
+    }
+
+    .search-btn-div {
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin: 40px 0 20px 0;
+        gap: 20px;
+    }
+    .wrap-staff .wrap-staff-checkbox-field label.checkbox-input-label {
+        text-transform: uppercase;
+        font-size: .75rem;
+        font-weight: 600;
+        color: #848484;
+    }

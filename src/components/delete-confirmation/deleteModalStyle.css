@@ -1,0 +1,36 @@
+
+.delete-container {
+   padding: 20px 30px;
+   text-align: center;
+}
+
+.delete-title-text {
+   text-transform: capitalize;
+   font-weight: 600;
+}
+
+.delete-title {}
+
+.delete-text {
+   margin: 10px 20px 0px 20px;
+   font-size: 15px;
+   line-height: 25px;
+}
+
+.btn-delete-popup {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
+   gap: 20px;
+   align-items: center;
+   margin-bottom: 10px;
+}
+
+.cancel {
+   background-color: gray !important;
+}
+
+.confirm {
+   background-color: #AD88C6 !important;
+}

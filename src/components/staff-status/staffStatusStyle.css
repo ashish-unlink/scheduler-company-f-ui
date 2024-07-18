@@ -1,0 +1,78 @@
+.employee-status-wrap {
+    background-color: #fff;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 25%;
+}
+
+.seletected-user {
+    background-color: #e5ecfa;
+}
+
+
+.filter-wrap {
+    margin-top: 20px;
+}
+
+.staff-status-list {
+    height: calc(81vh - 200px);
+    overflow-y: auto;
+}
+
+.staff-status-list-item {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+
+.staff-text-head {
+    font-family: "Work Sans", sans-serif !important;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.staff-text {
+    font-family: "Work Sans", sans-serif !important;
+    font-weight: 600;
+    color: #000;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.active-user {
+    background-color: #7ac57a;
+}
+
+.inactive-user {
+    background-color: #eb4b4b;
+}
+
+.head {
+    background-color: #AD88C6 !important;
+}
+
+.wrap {
+    background-color: #fff !important;
+    cursor: pointer;
+}
+
+.dropdown-options-heading {
+    font-size: 16px;
+    color: #000;
+    font-family: "Work Sans", sans-serif;
+    text-transform: capitalize;
+    padding-left: 10px;
+}

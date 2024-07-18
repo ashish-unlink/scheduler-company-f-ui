@@ -1,0 +1,119 @@
+.container {
+  position: relative;
+}
+.action-bar-service-text {
+  font-family: "Work Sans", sans-serif !important;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin: 8px 0 10px 0 !important;
+  padding: 7px 0 7px 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  border-radius: 4px;
+}
+
+.search-icon {
+  height: 20px;
+  margin: 10px;
+}
+
+.add-new-btn {
+  line-height: 2rem;
+  text-align: center;
+  height: 2rem;
+  width: 8rem;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #AD88C6;
+  font-family: "Work Sans", sans-serif !important;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.outline-btn{
+  color:#AD88C6 !important;
+  border-color: #AD88C6 !important;
+  font-size: 13px;
+  font-weight: 600 !important;
+  font-family: "Work Sans", sans-serif !important;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* service wrap */
+
+.wrap-services{
+  padding: 20px;
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow-y: scroll;
+  height: 77vh;
+}
+
+.wrap-search-check-box{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: capitalize;
+  width: 70%;
+}
+
+.search-service-wrap{
+  width: 30%;
+}
+
+.wrap--service-check-box{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: capitalize;
+  padding-left: 20px;
+}
+
+.search-text{
+  font-weight: 600;
+  font-family: "Work Sans", sans-serif;
+}
+
+.service-flating-point{
+  position: absolute;
+  bottom:3.5rem;
+  left: auto;
+  right: 50px;
+}
+.service-flating-point button{
+  width: 54px;
+  gap: 10px;
+  height: 54px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: 0.4s ease-in-out;
+  background: #7469B6;
+  border: 0;
+  border-radius: 100px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.service-flating-point button strong {
+  display: none;
+    transition: 0.8s ease-in;
+    min-width: 130px;
+}
+.service-flating-point button span {
+  color: #fff;
+  font-size: 34px;
+  cursor: pointer;
+  display: inline-block;
+}
+.service-flating-point button:hover {
+  width: 190px;
+}
+.service-flating-point button:hover strong{
+  display: inline-flex;
+    color: #fff;
+    text-transform: uppercase;
+}

@@ -1,0 +1,27 @@
+.add-btn-assign {
+    color: #fff !important;
+    background-color: #AD88C6 !important;
+    border-radius: 50% !important;
+    min-width: 35px !important;
+    /* height: 35px; */
+    font-size: 21px !important;
+    cursor: pointer;
+}
+
+.border-design-btn {
+    color: #AD88C6 !important;
+    border-radius: 50% !important;
+    min-width: 27px !important;
+    /* width: 27px !important;
+    height: 27px !important; */
+    font-size: 20px !important;
+    border: 1px solid #AD88C6 !important;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.float-btn-disable{
+    opacity: 0.7;
+}

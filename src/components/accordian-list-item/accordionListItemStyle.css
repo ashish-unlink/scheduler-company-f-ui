@@ -1,0 +1,58 @@
+.accordion-list {
+    margin-top: 0px;
+}
+
+.wrap-item {
+    display: flex !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+}
+
+/* TODO remove in future */
+/* .checkbox-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+} */
+
+.checkbox-wrap {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    gap: 0px;
+}
+
+.item-text-time-wrap {
+    width: 15%;
+}
+
+.service-text {
+    font-family: "Work Sans", sans-serif !important;
+    font-weight: 600;
+    color: #000;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    margin-right: 5px;
+    text-transform: capitalize;
+}
+
+.service-price {
+    justify-content: right;
+}
+
+.text-align-end {
+    text-align: end;
+}
+
+.item-text-wrap {
+    width: 25%;
+}
+
+.info-icon {
+    color: #AD88C6;
+}

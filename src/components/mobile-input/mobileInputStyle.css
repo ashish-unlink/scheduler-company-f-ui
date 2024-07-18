@@ -1,0 +1,16 @@
+.text-wrap{
+  width: 100%;
+}
+
+.text-wrap .PhoneInput input{
+  height: 40px;
+  padding-left: 20px;
+  border:1px solid #dfdfdf;
+  border-radius: 5px;
+}
+
+
+.text-wrap .PhoneInput--focus input{
+  outline: none !important;
+  border: 2px solid #7469B6;
+}

@@ -1,0 +1,121 @@
+.container-details {
+  width: 100%;
+  display: flex;
+
+  justify-content: flex-start;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 1px 2px #EBEBEB;
+
+}
+
+.costumer-desing-details {
+  width: 25%;
+  margin: 2px;
+  border-right: 2px solid #EBEBEB;
+  padding: 20px;
+  text-align: center;
+}
+
+.right-div-column {
+  width: 100%;
+  background-color: #ffffff;
+  margin: auto;
+}
+
+.icon-user {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.profilte-text-wrap {
+  width: 50%;
+}
+
+
+.profilte-text-wrap:first-child {
+  border-right: 2px solid #EBEBEB;
+}
+
+.profile-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-start;
+  margin-top: 15px;
+}
+
+.title-bottom-div {
+  justify-content: center;
+  display: flex;
+}
+
+
+.heading {
+  font-family: "Work Sans", sans-serif !important;
+  text-transform: capitalize;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+.sub-heading {
+  font-family: "Work Sans", sans-serif !important;
+  font-size: 14px !important;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: #6b6b6b !important;
+  margin-bottom: 10px;
+  margin-top: 8px;
+  text-transform: capitalize;
+}
+
+.email-text{
+  text-transform: lowercase;
+}
+
+.title-text-right-div {
+  text-align: center;
+}
+
+
+.edit-img {
+  height: 18px;
+  width: 18px;
+}
+
+.details-main-div {
+  width: 75%;
+  align-items: center;
+  padding: 20px 20px 20px 25px;
+  position: relative;
+
+}
+
+.delete-img-div {
+  display: flex;
+  width: 96%;
+  justify-content: end;
+  position: absolute;
+  align-items: center;
+  top: 5px;
+  gap:10px;
+}
+
+.right-top-div1 {
+  flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+}
+
+.wrap-propfile-info-test {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-bottom: 2px solid #EBEBEB;
+}

@@ -1,0 +1,15 @@
+.guidance-wrap{
+    padding: 30px 30px 50px 30px;
+}
+
+.btn-group-wrap{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    margin-top:20px;
+}
+
+.note{
+    font-weight: 700;
+}

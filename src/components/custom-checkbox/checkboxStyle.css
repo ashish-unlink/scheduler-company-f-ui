@@ -1,0 +1,7 @@
+.checkbox-text-field {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 5px;
+    align-items: center;
+}

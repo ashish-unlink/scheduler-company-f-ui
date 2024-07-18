@@ -1,0 +1,29 @@
+.custom-textarea-container{
+  width: 100%;
+}
+.custom-textarea-label {
+    color: #000;
+    /* text-transform: uppercase; */
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: left;
+    /* font-family: "Kumbh Sans", sans-serif ; */
+  }
+  
+  .text-area {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #DADADA;
+    /* padding-left: 2rem;
+    padding-top: 1.2rem; */
+    font-size: 17px;
+    font-family:  "IBM Plex Sans", sans-serif !important;
+    color:#000;
+    letter-spacing: inherit;
+    resize: none;
+  }
+  .text-area:focus {
+    outline: 2px solid #7469B6;
+  }
+  

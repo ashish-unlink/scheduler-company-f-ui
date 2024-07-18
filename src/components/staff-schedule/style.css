@@ -1,0 +1,38 @@
+.staff-schedule-container{
+    padding: 20px;
+    margin-top: 10px;
+    background-color: #fff;
+}
+
+.time-column{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.time-item-wrap{
+    background-color: aliceblue;
+    padding:10px 15px;
+    border-radius: 15px;
+    display: flex;
+    text-align: center;
+}
+
+.day-value{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.info-icons{
+    display: flex;
+    gap: 20px;
+}
+
+.icon-cursor{
+    cursor: pointer;
+}
+.schedule-table-header {
+    background: #7469B6 !important;
+    color: #fff !important;
+}

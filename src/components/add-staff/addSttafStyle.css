@@ -1,0 +1,118 @@
+.wrap-staff {
+  padding: 20px 30px 32px;
+  position: relative;
+  height: 95vh;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.wrap-staff::-webkit-scrollbar-thumb {
+  display: block;
+}
+
+.wrap-staff-field {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  align-items: flex-start;
+  margin-top: 15px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.wrap-staff-checkbox-field {
+  display: flex;
+  justify-content: left;
+  gap: 5px;
+  align-items: center;
+  width: 50%;
+  margin-top: 5px;
+}
+
+.wrap-checkbox{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 66.6%;
+}
+
+
+.btn-div {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-div.header-popup-button {
+  position: relative;
+  margin: 7px 0 0 0;
+}
+button.MuiButtonBase-root.MuiTab-root.MuiTab-textColorPrimary{
+  font-family: "Work Sans", sans-serif !important;
+  font-size: .85rem;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.contained-btn {
+  background-color: #AD88C6 !important;
+  box-shadow: none !important;
+  font-size: 13px;
+  font-weight: 600 !important;
+  font-family: "Work Sans", sans-serif !important;
+  width: 140px !important;
+  top: 5px;
+  right: 10px;
+}
+
+button.MuiButtonBase-root.Mui-selected {
+  color: #061f2d;
+}
+
+.staff-input-wrap {
+  width: 32.5% !important;
+}
+.wrap-staff-field .staff-input-wrap:nth-child(3) .dob-container {
+  top: -6px;
+}
+.dob-container input {
+  font-size: .95rem;
+  
+}
+.dob-container input::-ms-input-placeholder { /* Edge 12-18 */
+  color: #9b9b9b;
+}
+
+.dob-container input::placeholder {
+  color: #9b9b9b;
+}
+.staff-form-label-text{
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgb(233 233 233);
+  padding-bottom: 5px;
+  letter-spacing: .04em;
+  margin-top: 17px;
+  font-size: 15px;
+  color: #020b13;
+  text-shadow: 2px 1px 10px #f9f9f9;
+}
+.staff-form-label-text:first-of-type{
+  margin-top: 0px;
+}
+.checkbox-wrap.item-text-wrap svg.MuiSvgIcon-root {
+  color: #FFC107;
+}
+.staff-input-wrap label {
+  font-size: .75rem;
+  margin: 0 0 0px 0;
+  font-weight: 600;
+  color: #757575;
+  text-transform: uppercase;
+}
+
+.top-margin{
+  margin-top: 8px;
+}

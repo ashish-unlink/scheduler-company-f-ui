@@ -1,0 +1,53 @@
+.nav-bar-conatiner{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.staffStyle{
+    padding: 0px;
+}
+.nav-bar-conatiner.staffStyle {
+    border-bottom: 1px solid #ccc;
+    border-radius: 0px;
+    margin: 0;
+}
+.nav-bar-conatiner.false {
+    padding: 0 0;
+    margin: 8px 0 8px 0;
+}
+.nav-bar-conatiner.false .MuiButtonGroup-root.MuiButtonGroup-contained button {
+    font-size: .7rem;
+    font-weight: 600;
+    background: #AD88C6 !important;
+    border-color: #dcc9ff;
+}
+.wrap-nav-filters-items .download-csv-btn svg {
+    font-size: 1.4em;
+    position: relative;
+    top:2px;
+}
+.download-btn {
+    background: transparent;
+    border: 1px solid #AD88C6;
+    padding: 4px 6px 3px;
+    position: relative;
+    top: -1px;
+    border-radius: 4px;
+}
+.form-design .date-picker-range-container.date-picker-width .dob-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 5px;
+}
+.form-design .search-field-wrap div.MuiFormControl-root {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}

@@ -1,0 +1,33 @@
+.label-text {
+    margin-bottom: 0px !important;
+}
+
+.input-box {
+    height: 40px !important;
+}
+
+.wrap {
+    padding: 10px;
+    background-color: aliceblue;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+
+.dropdown-options-heading {
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+}
+
+.dropdown-options-text {
+    font-size: 14px;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.search-error-text {
+    margin-top: 5px !important;
+    margin-bottom: 0px !important;
+    font-size: 12px;
+    font-weight: 500;
+    color: red;
+}

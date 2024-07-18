@@ -1,0 +1,77 @@
+.toolbar-div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.flex-box {
+  display: flex;
+  height: 40px;
+  gap: 10px;
+}
+.gray-border {
+  border: 1.5px solid #c7bfbf;
+}
+.color-black {
+  color: rgb(106, 104, 104);
+  padding: 7px 3px;
+}
+.color-black:hover {
+  background: rgb(106, 104, 104);
+  color: white;
+}
+.verify {
+  top: 2.2rem;
+  right: 0.2rem;
+  border-radius: 6px;
+  z-index: 1;
+  padding: 9px 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.otp-field {
+  margin: 30px auto;
+}
+
+.otp-field input {
+  text-indent: 0px;
+}
+
+.otp-popup-content {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color:#fff;
+  padding: 2em;
+}
+.didnt-recieved{
+  margin-bottom: 0px;
+  margin-top: 15px;
+}
+
+.color-orange {
+  margin-top: 5px;
+}
+
+.error-text {
+  margin-top: 5px !important;
+  margin-bottom: 0px !important;
+  font-size: 14px;
+  font-weight: 500;
+  color: red;
+}
+.Cell-text {
+  text-transform: capitalize;
+}
+.MainLayout-container td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium.Cell-cell.Cell-horizontalCell.Demo-headerCell {
+  text-align: center;
+}
+
+.group-options{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  cursor: pointer;
+}

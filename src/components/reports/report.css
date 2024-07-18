@@ -1,0 +1,217 @@
+.calender-table-wrap {
+  background-color: #fff;
+  /* padding: 20px 15px; */
+  width: 100%;
+  border-radius: 10px;
+}
+
+.appointment-table-header {
+  text-transform: uppercase;
+  margin-top: 0 !important;
+  /* min-width: 50% !important; */
+  background: #5345a1 !important;
+  color: #fff;
+}
+
+.appointment-table-cell {
+  min-width: 17.5% !important;
+}
+
+.customer-status {
+  text-transform: capitalize;
+  padding: 7px 30px 4px;
+  border-radius: 48px;
+  width: 150px;
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+  font-size: .75rem;
+}
+
+.pending, .active {
+  background-color: rgb(255 244 224);
+  color: rgb(245, 165, 27);
+  border: 1px solid;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .04rem;
+}
+
+.canceled, .inactive {
+  background-color: rgb(255 239 236);
+  color: rgb(240, 56, 14);
+  border: 1px solid;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .04rem;
+}
+
+.clientrejected {
+  background-color: rgb(236, 247, 250);
+  color: rgb(29, 175, 215);
+  border: 1px solid;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .04rem;
+  width: auto;
+}
+
+.noShowCase {
+  background-color: rgb(255, 244, 241);
+  color: rgb(133, 28, 4);
+  border: 1px solid;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .04rem;
+}
+
+.completed {
+  background-color: rgb(241, 255, 241);
+  color: rgb(44, 129, 13);
+  border: 1px solid;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .04rem;
+}
+
+
+
+.appointment-table-header .MuiDataGrid-columnHeaderTitle {
+  font-weight: 600 !important;
+}
+
+.filter-btn {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid #AD88C6;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 5px 10px;
+  align-items: center;
+  cursor: pointer;
+  color: #AD88C6;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.filter-btn svg {
+  font-size: 20px;
+}
+
+.filter-text {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.left-container-wrap {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  width: 70%;
+}
+
+.download-csv-btn {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 5px 10px 0px;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+}
+
+.price-align {
+  text-align: end;
+}
+
+.view-icon-wrap{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  gap:15px;
+}
+
+.view-action {
+  cursor: pointer;
+  /* margin: 0 auto; */
+}
+
+.card-wrap {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  align-items: center;
+  background-color: #AD88C6;
+  border-radius: 5px;
+  padding: 10px 30px;
+  margin-bottom: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.card-wrap:hover {
+  opacity: 0.8;
+}
+
+.report-cards-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-design {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.search-filter-btn {
+  background: #AD88C6;
+  border: 2px solid #AD88C6;
+  border-radius: 6px;
+  padding: 5px 10px;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+  height: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.date-picker-range-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+
+}
+
+
+.date-picker-width {
+  width: 100%;
+}
+
+.wrap-nav-filters-items {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.search-field-wrap {
+  width: 47%;
+}
+
+.report-container {
+  padding: 0px 15px 20px;
+  width: 100%;
+}
+
+.activ-btn-group{
+  background-color: #7469B6 !important;
+}

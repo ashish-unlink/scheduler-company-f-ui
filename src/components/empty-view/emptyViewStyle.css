@@ -1,0 +1,11 @@
+.empty-view-wrap{
+    text-align: center;
+}
+
+.contained-empty-btn{
+    background-color: #7469B6 !important;
+    box-shadow: none !important;
+    font-size: 13px;
+    font-weight: 600 !important;
+    font-family: "Work Sans", sans-serif !important;
+}

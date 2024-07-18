@@ -1,0 +1,8 @@
+.weekly-date-picker>div>input, .weekly-date-picker>div>fieldset{
+     display: none;
+}
+
+.weekly-date-picker>div>div>button{
+    color: #041e2d;
+    font-size: large;
+}

@@ -1,0 +1,210 @@
+{
+  "login": "ログイン",
+  "add_new_category": "新しいカテゴリを追加",
+  "login_account": "アカウントにログイン",
+  "forgot_password": "パスワードを忘れましたか？",
+  "create_new_account?": "新しいアカウントを作成しますか？",
+  "create_your_account": "アカウントを作成する",
+  "fields_are_required.": "すべてのフィールドは必須です。",
+  "sign_up": "サインアップ",
+  "have_an_account?": "すでにアカウントをお持ちですか？",
+  "enter_otp_verify": "OTPを入力して確認してください",
+  "email_verfication_text": "先ほど送信した認証コードを受信したメールアカウントを確認し、以下のボックスにそのコードを入力してください。",
+  "verify": "確認",
+  "didn’t_receive_code?": "コードが届かない場合？",
+  "resend_otp": "OTPを再送信",
+  "customer_details": "顧客の詳細",
+  "verified": "確認済み",
+  "pay_using_qr": "QRコードを使用して支払う",
+  "appointment_details": "予約の詳細",
+  "service": "サービス",
+  "start_time": "開始時間",
+  "end_time": "終了時間",
+  "time": "時間",
+  "price": "価格",
+  "total_time :": "合計時間：",
+  "amount_paid":"支払われるべきもの",
+  "booking_amount": "払込金額",
+  "balance_amount": "残高",
+  "home": "ホーム",
+  "add_service": "サービスを追加",
+  "add_new": "新規追加",
+  "staff": "スタッフ",
+  "welcome_aboard": "ようこそ！",
+  "thanks_description": "OTPが確認されました。プロフィールを設定して始めましょう - ここをクリックしてログインしてください！",
+  "catalogue": "カタログ",
+  "calendar": "カレンダー",
+
+  "add_services": "サービスを追加",
+  "view_staffs": "スタッフを表示",
+
+  "logout": "ログアウト",
+  "appointment_completed_successfully": "予約が正常に完了しました",
+  "add_customer": "顧客を追加",
+  "confirm_delete": "削除を確認",
+  "delete": "本当に削除しますか",
+  "delete_text": "情報を失うことなく予約を停止するために常に「無効」にすることができます。",
+  "confirm": "確認",
+  "cancel": "キャンセル",
+  "add_new_customer": "新しい顧客を追加",
+  "no_data": "データなし",
+  "total_amount": "合計金額：Rs",
+  "status": "ステータス",
+  "name": "名前",
+  "no_client_selected": "クライアントが選択されていません",
+  "select_therapist": "セラピストを選択",
+  "scheduler_data": "スケジューラデータ",
+  "current_address": "現在の住所と同じ",
+  "add_staff": "チームメンバーを追加",
+  "advanced_filter": "高度なフィルター",
+  "download": "ダウンロード",
+  " add_new_customer": "新しい顧客を追加",
+  "appointment_scheduled": "予約が正常にスケジュールされました",
+  "download_csv": "CSVをダウンロードする日付範囲を選択してください 日付範囲を選択してCSVをダウンロードする",
+  "csv_download_option": "Csvダウンロードオプション",
+  "save": "保存",
+
+  "status_view": "ステータスビュー",
+
+  "scheduler_dashoboard": "スケジューラ ダッシュボード",
+  "calender": "カレンダー",
+  "team": "チーム",
+  "attendence": "出席",
+  "analytic_report": "分析とレポート",
+
+  "todays_sale": "本日のセール",
+  "todays_cancel": "本日のキャンセル金額",
+  "todays_customer": "本日の新規のお客様",
+  "todays_appointment": "今日の予定",
+  "no_appointment": "No Appointments for Today",
+
+  "team_engage": "今日のチームの取り組み ",
+  "team_service": "本日のサービス業務",
+
+  "team_member": "チームメンバー",
+  "services": "サービス",
+
+  "completed": "完了しました",
+  "upcoming": " 今後の予定",
+  "cancelled": "キャンセル",
+
+  "appointment_status": "予約状況",
+
+  "customer": "お客様",
+  "comments": "コメント",
+  "booking_comments": "予約コメント",
+
+  "select_service": "サービスの選択",
+
+  "select_staff": "スタッフの選択",
+
+  "service_name": "サービス名",
+  "time_required": "所要時間",
+
+  "action": "アクション",
+
+  "last_name": "苗字",
+  "first_name": "ファーストネーム",
+  "email": "Eメール",
+  "mobile": "携帯",
+  "gender": "性別",
+  "category_name": "種別名",
+
+  "thanks": "ありがとう！",
+  "email_sent": "メールは正常に送信されました。",
+  "done": "終わり",
+
+  "search_category": "検索カテゴリ",
+
+  "edit": "編集",
+  "delete_btn": "消去",
+
+  "update_category": "カテゴリを更新する",
+  "enable_appointment": "予約を有効にする",
+  "update_services": "アップデートサービス",
+
+  "select_category": "カテゴリを選んでください",
+
+  "time_in_min": "時間(分単位)",
+
+  "description": "説明",
+  "manage_staff": "スタッフの管理",
+  "schedule": "スケジュール",
+  "dob": "生年月日",
+
+  "end_date": "終了日",
+  "employee_state": "従業員のステータス",
+  "address": "住所",
+  "title": "タイトル",
+  "employee_code": "従業員コード",
+
+  "employee_name": " 従業員名",
+  "date": "日付",
+  "leave": "離れる",
+  "update_attendence": "出席状況を更新する",
+
+  "customer_name": "顧客名",
+  "customer_email": "顧客の電子メール",
+  "customer_mobile": "顧客の携帯電話",
+  "application_status": "アプリケーションの状態",
+  "amount": "額",
+
+  "set_bussiness_prefrence": "ビジネスの基本設定をセットアップする",
+  "open_time": "開館時間",
+  "close_time": "閉店時間",
+
+  "personal_details": "個人情報",
+  "job_details": "仕事の詳細",
+  "phone_number": "電話番号",
+  "start_date": "開始日",
+
+  "street": "通り",
+  "city": "市",
+  "state": "州",
+
+  "postal_code": "郵便番号",
+  "country": "国",
+  "note": "ノート",
+
+  "add_shift": "シフトを追加する",
+  "this_shift": "このシフト",
+  "message_choose_another_time": "シフトの別の時間を選択してください",
+  "comissions": "手数料",
+
+  "set_up_wizard": "セットアップウィザード",
+
+  "no_category": "利用可能なカテゴリがありません。新しいカテゴリを追加できます。",
+  "no_staff": "チームにメンバーがいません。新しいメンバーを追加できます。",
+  "no_search": "検索名で結果が見つかりませんでした",
+
+  "currency": "通貨",
+  "secret_key": "秘密鍵",
+  "dasmid": "ダスミド",
+
+  "assign_service": "サービスの割り当て",
+  "select_category_with_service": "すべてのサービスのすべてのカテゴリを選択します",
+  "select_all_services": "すべてのサービスを選択してください",
+  "select": "選択する",
+  "day": "日",
+
+  "all_appointment": "すべての予約",
+  "sales_by_service": "サービス別売上高",
+  "sales_by_staff": "スタッフ別売上高",
+  "sales_by_customer": "顧客別売上高",
+  "all": "全て",
+  "this_week": "今週",
+  "this_month": "今月",
+  "this_year": "今年",
+
+  "resent_links":"再送信されたリンク",
+  "send_payment_link":"支払いリンクを送信する",
+  "skip": "スキップ",
+  "from": "から",
+  "to": "に",
+  "select_customer": "顧客の選択",
+  "search":"検索",
+
+  "gate_way_url": "ゲートウェイ URL",
+  "x_api_key": "X-API-キー"
+
+}

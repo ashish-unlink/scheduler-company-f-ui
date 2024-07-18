@@ -1,0 +1,564 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+html, body {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Work Sans", sans-serif;
+  background-color: #fff !important;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+/* width */
+/* ::-webkit-scrollbar {
+  width: 5px;
+} */
+
+body::-webkit-scrollbar {
+  padding: 0 !important;
+  width: 0 !important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 8px #7d7c7c;
+}
+
+ul {
+  list-style: none;
+}
+
+.color-orange {
+  color: #5345a1;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+/* flex */
+.flex-start {
+  align-items: flex-start !important;
+}
+
+.flex-column-space-between {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* font-weights */
+.fw-600 {
+  font-weight: 600 !important;
+}
+
+/* button */
+.button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.white {
+  color: white;
+}
+
+.bg-orange {
+  background: #5345a1;
+}
+
+.color-orange {
+  color: #5345a1;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.flex-row-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dob-container fieldset {
+  border-color: #dadada !important;
+}
+
+button.MuiPickersDay-root.Mui-selected {
+  color: #5345a1 !important;
+  background: #e3eaf9 !important;
+  border: 1px solid #5345a1 !important
+}
+
+button.MuiPickersDay-root.Mui-disabled {
+  background: #f7f7f7 !important;
+  color: #333 !important;
+  border: 1px solid #e9e9e9;
+}
+
+button.MuiPickersYear-yearButton.Mui-selected, button.MuiPickersMonth-monthButton.Mui-selected {
+  background: #5345a1 !important;
+}
+
+button.MuiPickersYear-yearButton.Mui-selected:hover, button.MuiPickersMonth-monthButton.Mui-selected:hover {
+  background: #275dd1 !important;
+}
+
+.user-p-wraps {
+  position: relative;
+  padding: 20px 20px;
+}
+
+.profile-user p.profile-text {
+  font-weight: 600;
+  color: #5345a1;
+  font-size: 1.2em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 150px;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium.Cell-cell.Cell-brightRightBorder:hover {
+  background-color: transparent !important;
+}
+
+td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium.Cell-cell.Cell-brightRightBorder:hover::before {
+  position: absolute;
+  z-index: 0;
+  content: "Please double click to Add New Appointment";
+  font-size: 12px;
+  padding: 15px 12px;
+  top: 0px;
+  vertical-align: middle;
+  color: #5345a1;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-weight: 600;
+}
+
+td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium.Cell-cell.Cell-brightRightBorder:hover::after {
+  position: absolute;
+  z-index: 0;
+  content: "Add New Appointment";
+  font-size: 12px;
+  padding: 15px 12px;
+  top: 0px;
+  right: 10px;
+  vertical-align: middle;
+  color: #5345a1;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  display: none;
+}
+
+
+.bussiness-input-wrap fieldset {
+  border-color: #dadada !important;
+}
+
+td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium.Cell-cell.Cell-brightRightBorder.Cell-shadedCell:hover::before {
+  display: none !important;
+}
+
+td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium.Cell-cell.Cell-brightRightBorder.Cell-shadedCell:hover {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+  cursor: not-allowed
+}
+
+/* button.MuiPickersDay-root {
+  border: none;
+  margin: 0 2px 10px;
+  width: 36px;
+  height: 36px;
+  border-radius: 2px 2px 2px 2px;
+  padding: 4px 0 !important;
+  align-items: flex-start;
+  color: #5345a1;
+} */
+.MuiBadge-root span.MuiBadge-badge {
+  padding: 5px 0 !important;
+  width: 16px !important;
+  height: 16px;
+  background: transparent;
+  right: 12px;
+  top: 19px;
+  font-size: 10px;
+  min-width: auto;
+  transform: none;
+  color: #adadad;
+  border-radius: 10px 10px 10px 0px;
+  cursor: pointer;
+}
+
+/* .MuiDayCalendar-weekContainer {
+  justify-content: flex-start !important;
+  gap:4.5px;
+} */
+.MuiDateCalendar-root {
+  min-height: 380px !important;
+  height: 380px !important;
+}
+
+.MuiDateCalendar-root .MuiPickersSlideTransition-root.MuiDayCalendar-slideTransition {
+  min-height: 320px !important;
+}
+
+.appointment-status-list {
+  position: relative;
+  margin: 0px 0 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.appointment-status-list h3 {
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: .04rem;
+  color: #fff;
+  padding: 9px 15px 6px 15px;
+  margin: 0 -20px 0 -10px;
+  background: #5345a1;
+}
+
+.appointment-status-list ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 98%;
+}
+
+.appointment-status-list ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 17px 6px;
+  border: 1px solid #dfdfdf;
+  margin: 0 0px 0 0px;
+  width: 100%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 12px;
+}
+
+.scheduler-charts {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.chasts-lst {
+  width: 33%;
+}
+
+.scheduler-container.dashboard-container {
+  width: 100%;
+  background: #fff;
+  height: calc(100vh - 140px);
+}
+
+.service-flating-point span.add-app-span {
+  background: #5345a1;
+  position: relative;
+  left: -5px;
+  color: #fff;
+  top: 2px;
+  text-transform: uppercase;
+  font-size: .85em;
+  font-weight: 600;
+  letter-spacing: .03rem;
+  display: none;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.service-flating-point:hover span.add-app-span {
+  display: inline-block !important;
+  transition: 0.5s ease-in-out;
+}
+
+.appointment-status-list ul li strong {
+  position: relative;
+  text-transform: uppercase;
+  font-size: .88rem;
+  font-weight: 600;
+  color: #6a6a6a;
+  letter-spacing: 0.03rem;
+}
+
+.appointment-status-list ul li span {
+  position: relative;
+  text-transform: uppercase;
+  font-size: .95rem;
+  cursor: pointer;
+  color: #5345a1;
+  font-weight: 600;
+}
+
+.appointment-status-list ul li span:hover {
+  color: #5345a1;
+  font-weight: 600;
+}
+
+/* span.MuiTypography-root.MuiTypography-caption.MuiDayCalendar-weekDayLabel {
+  margin: 0 0px 0px;
+  width: 43px;
+  height: 46px;
+  text-align: center;
+  justify-content: left;
+} */
+.chasts-lst.pie-chart-wrap canvas {
+  width: 320px !important;
+  height: 320px !important;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.MuiDataGrid-columnHeaderTitleContainer:focus-visible {
+  outline: 0;
+}
+
+.MuiDataGrid-columnHeader.MuiDataGrid-withBorderColor.appointment-table-header:focus {
+  outline: 0;
+}
+
+.view-action svg {
+  font-size: 1.2em;
+  color: #03A9F4;
+  padding: 0px 0px;
+}
+
+.MuiDataGrid-columnHeader:focus {
+  outline: 0 !important;
+}
+
+
+.text-wrap .PhoneInput input::placeholder {
+  /* color: #999;  */
+  color: #bbb8b8 !important;
+  font-weight: 500 !important;
+
+}
+
+main .MuiToolbar-regular {
+  min-height: 42px;
+}
+
+.popup-wrapper.customer-add-pops {
+  padding: 30px 0 0 0;
+}
+
+.popup-wrapper.customer-add-pops::before {
+  position: absolute;
+  top: 0;
+  left: -30px;
+  width: 119%;
+  content: "";
+  background: #ccc;
+  height: 1px;
+  display: none;
+}
+
+.popup-wrapper.customer-add-pops h3 {
+  font-size: 1em;
+  margin: 0 0 12px 0;
+  color: #5345a1;
+}
+
+.popup-wrapper.customer-add-pops .appointment-input-label, .popup-wrapper.customer-add-pops .text-wrap label, .popup-wrapper.customer-add-pops .MuiFormControl-root label {
+  font-size: .8em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #606270;
+}
+
+.qr-pay-screen {
+  display: none;
+}
+
+.appointment-table-header.analytics-table-header, .appointment-modal-table-header.analytics-table-header {
+  background: #5345a1 !important;
+  color: #fff !important;
+  margin: 0 0 0 0 !important;
+}
+
+ul.MuiList-root.MuiList-padding.MuiMultiSectionDigitalClockSection-root::-webkit-scrollbar {
+  width: 5px;
+}
+
+ul.MuiList-root.MuiList-padding.MuiMultiSectionDigitalClockSection-root::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 8px #7d7c7c;
+}
+
+/* Add a thumb */
+ul.MuiList-root.MuiList-padding.MuiMultiSectionDigitalClockSection-root::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+li.MuiListItem-root.MuiListItem-gutters.menu-item.active {
+  background: inherit !important;
+  border: inherit !important;
+}
+
+.form-design .search-field-wrap .search-by-staff {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.form-design .date-picker-range-container.date-picker-width .dob-container label.dob-label, .form-design .search-field-wrap div.MuiFormControl-root label, .form-design .search-field-wrap .search-by-staff .appointment-input-label {
+  font-size: .68rem;
+  text-transform: uppercase;
+  font-weight: 600 !important;
+}
+
+.form-design .search-field-wrap .search-by-staff div.MuiFormControl-root {
+  width: 72%;
+}
+
+.form-design .search-field-wrap .search-by-staff.select-by-customer div.MuiFormControl-root {
+  width: 62%;
+}
+
+.form-design .search-field-wrap div.MuiFormControl-root .MuiAutocomplete-root {
+  width: 64%;
+}
+
+.form-design .search-field-wrap {
+  width: 80%;
+}
+
+.wrap-nav-filters-items .left-container-wrap {
+  width: 80%;
+  position: relative;
+  top: 0px;
+}
+
+.form-design .date-picker-range-container.date-picker-width .dob-container input, .form-design .search-field-wrap div.MuiFormControl-root input {
+  font-size: .75rem;
+}
+
+.form-design button.search-filter-btn {
+  padding: 10px 20px !important;
+  height: auto;
+  border: 0;
+}
+
+.customer-details-search-navbar {
+  display: flex;
+  justify-content: flex-end;
+  width: 100% !important;
+  position: relative;
+}
+
+.customer-details-search-navbar .MuiFormControl-root {
+  width: 20%;
+}
+
+.customer-details-search-navbar.daterange-sel-navbar .dob-container {
+  width: 20%;
+}
+
+.customer-details-search-navbar.daterange-sel-navbar .MuiFormControl-root {
+  width: 100%;
+}
+
+.MuiDataGrid-columnHeaders {
+  height: 36px !important;
+  min-height: 36px !important;
+  max-height: 36px !important;
+  line-height: 36px !important;
+}
+
+.scheduler-container .MuiPaper-root {
+  padding: 10px 10px;
+}
+
+.appointment-info-dialog-box button.edit-app {
+  position: absolute;
+  right: 40px;
+  padding: 9px 10px 4px;
+  background: transparent;
+  border: 1px solid #ccc;
+  font-size: 21px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.customer-status.noshow {
+  color: #6b6b6b;
+  background: #ececec;
+  border: 1px solid;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.appointment-details .appointment-table-header{
+  padding: 6px 10px 4px;
+}
+.appointment-details .appointment-table-body{
+  padding: 0 10px;
+}
+.appointment-info-dialog-box .profile-box .refresh-wrap{
+  right: 0;
+}
+.save-attendence-div-button button {
+  background: #5345a1;
+}
+
+.wrap-table .MuiDataGrid-root.MuiDataGrid-root--densityStandard {
+  height: 57vh;
+}

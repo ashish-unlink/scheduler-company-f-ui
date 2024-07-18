@@ -1,0 +1,57 @@
+.custom-input-container {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.custom-input-label {
+  color: #000;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0.1em;
+  text-align: left;
+}
+
+/* .custom-input {
+    width: 624px;
+    height: 60px;
+    border-radius: 50px;
+    border: 1px;
+    padding-left: 2rem;
+    margin-top: 1rem;
+  }
+  .custom-input:focus {
+    outline: 5px solid #7469B6;
+  } */
+
+.design-country-code {
+  border-right: 1px solid #DADADA;
+  width: 80px;
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+  background-color: #fff;
+  height: 42px !important;
+  text-align: left;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-weight: 700;
+}
+
+.design-country-code:disabled {
+  background: transparent;
+}
+
+.error-text {
+  margin-top: 5px !important;
+  margin-bottom: 0px !important;
+  font-size: 13px;
+  font-weight: 500;
+  color: #ff9393;
+}
+.custom-input-container .info-icon {
+  color: #fff;
+  top: -1px;
+  position: relative;
+}

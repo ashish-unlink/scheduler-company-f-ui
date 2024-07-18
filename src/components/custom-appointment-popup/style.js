@@ -1,0 +1,67 @@
+export const popupstyle = {
+  position: "absolute",
+  top: "0",
+  right: "0",
+  // transform: "translate(-50%, -50%)",
+  width: "90%",
+  height: "100vh",
+  bgcolor: "background.paper",
+  border: "none",
+  borderRadius: "0",
+  boxShadow: 24,
+  p: 0,
+};
+export const customerpopupstyle = {
+  position: "absolute",
+  top: "22vh",
+  left: "25%",
+  transform: "translate(-50%, -50%)",
+  width: "50%",
+  height: "auto",
+  bgcolor: "background.paper",
+  border: "none",
+  borderRadius: "1rem",
+  boxShadow: 24,
+  p: 0,
+};
+export const otpPopupstyle = {
+  position: "absolute",
+  top: "22vh",
+  left: "32%",
+  transform: "translate(-50%, -50%)",
+  width: "36%",
+  height: "auto",
+  bgcolor: "background.paper",
+  border: "none",
+  borderRadius: "1rem",
+  boxShadow: 24,
+  p: 0,
+};
+
+export const customerSendSuccessfully = {
+  position: "absolute",
+  top: "22vh",
+  left: "35%",
+  transform: "translate(-50%, -50%)",
+  width: "28%",
+  height: "auto",
+  bgcolor: "background.paper",
+  border: "none",
+  borderRadius: "1rem",
+  boxShadow: 24,
+  p: 0,
+};
+
+export const appointmentpopupstyle = {
+  position: "absolute",
+  top: "0",
+  right: "0%",
+  transform: "translate(-50%, -50%)",
+  width: "60%",
+  height: "100vh",
+  bgcolor: "background.paper",
+  border: "none",
+  borderRadius: "0rem",
+  boxShadow: 24,
+  // p: 4,
+};

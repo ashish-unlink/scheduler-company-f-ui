@@ -1,0 +1,13 @@
+.Status-form-container {
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calender-table-wrap-Status {
+  background-color: #fff;
+  padding: 20px 15px;
+  width: 100%;
+  border-radius: 10px;
+}
