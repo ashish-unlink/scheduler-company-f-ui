@@ -1,5 +1,5 @@
 .profile-icon {
-  background: #AD88C6;
+  background: #4CAF50;
   border-radius: 50%;
   padding: 2px 4px;
   color: white;
@@ -17,7 +17,7 @@
 }
 
 .keyboard-down-arrow-icon {
-  color: #ffffff;
+  color: gray;
 }
 
 .logout-button {
@@ -25,7 +25,7 @@
 }
 
 span.MuiButtonBase-root.MuiCheckbox-root.Mui-checked {
-  color: #AD88C6 !important;
+  color: #4CAF50 !important;
 }
 
 .language-item {
@@ -43,3 +43,8 @@ span.MuiButtonBase-root.MuiCheckbox-root.Mui-checked {
   left: 0px;
 }
 
+.store-name{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}

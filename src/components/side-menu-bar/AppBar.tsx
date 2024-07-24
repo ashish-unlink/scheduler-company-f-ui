@@ -12,7 +12,7 @@ import { constantString } from "../../utils/constantString";
 import { logout } from "../../redux/auth/action";
 import { useAppDispatch, useAppSelector } from "../../redux";
 import { selectUserGuidenceModal } from "../../redux/meta/selector";
-import { selectOwnerData } from "../../redux/auth/selector";
+import { selectCurrentOutlet, selectOwnerData } from "../../redux/auth/selector";
 import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { setSettingBussinessSetUP, setShowSearch } from "../../redux/meta/slice";
@@ -28,7 +28,7 @@ const Header = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
-
+  const store = useAppSelector(selectCurrentOutlet);
   const onClickLanguageChange = (e: any) => {
     const lang = e;
     i18n?.changeLanguage(lang);
@@ -53,6 +53,8 @@ const Header = () => {
           </div>
 
           <div className="scheduler-toolbar-right-section">
+
+            <p className="store-name">({store?.title})</p>
             <div
               className="search-icons-sidebar"
               onClick={() => dispatch(setShowSearch(true))}
