@@ -1,0 +1,6 @@
+.action-btn-wrap{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0px auto;
+}

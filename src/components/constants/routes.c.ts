@@ -8,7 +8,8 @@ export const PrivatePath = {
   attendence:"/attendence",
   analytics:"/analytics-reports",
   customerDetails:"/customer-details",
-  pos:"/pos"
+  pos:"/pos",
+  manageStores:"/manage-stores",
 };
 export const PublicPath = {
   login: "/login",

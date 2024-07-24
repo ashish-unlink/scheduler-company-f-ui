@@ -20,6 +20,8 @@ import CustomerDetails from "../../pages/customer-details";
 import { LuUserPlus2 } from "react-icons/lu";
 import PosIframe from "../../pages/pos";
 import { TbDeviceDesktopDollar } from "react-icons/tb";
+import { LiaStoreSolid } from "react-icons/lia";
+import ManageStores from "../../pages/manage-stores";
 
 interface MenuListProps {
   text: string;
@@ -79,6 +81,13 @@ const MenusList: MenuListProps[] = [
     to: PrivatePath.analytics,
     Component: AnalyticsReport,
     label:constantString.ANALYTICS_REPORT,
+  },
+  {
+    text: constantString.MULTI_STORE,
+    icon: <LiaStoreSolid />,
+    to: PrivatePath.manageStores,
+    Component: ManageStores,
+    label: constantString.MULTI_STORE,
   },
   // {
   //   text: "Point of Sale",

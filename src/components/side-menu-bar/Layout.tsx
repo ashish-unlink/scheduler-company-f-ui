@@ -22,6 +22,8 @@ import { setSettingBussinessSetUP } from "../../redux/meta/slice";
 import { selectServiceList } from "../../redux/service/selector";
 import { selectEmployeeList } from "../../redux/staff/selector";
 import SetUpBussinessModal from "../set-up-bussiness/SetUpBussinessModal";
+import { selectChangeStoreModal } from "../../redux/multi-store/selector";
+import { StoreListModal } from "./StoreListModal";
 
 const drawerWidth = 80;
 
@@ -39,6 +41,7 @@ export default function Layout({
   const employeeList = useAppSelector(selectEmployeeList);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
+  const open = useAppSelector(selectChangeStoreModal);
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -62,17 +65,15 @@ export default function Layout({
       </Box>
 
       <div className="service-flating-point">
-        <button
+        <AddFloatingButton
           onClick={() => {
             dispatch(setShowCustomerAppointmentModal(true));
             navigate(PrivatePath?.create);
           }}
           title="Add Appointment"
           disabled={serviseList?.length == 0 || employeeList?.length == 0}
-          ><span>+</span>
-            <strong>Add Appointment</strong>
-          </button>
-        {/* {(serviseList?.length != 0 || employeeList?.length != 0) && (
+        />
+        {(serviseList?.length != 0 || employeeList?.length != 0) && (
           <span
             onClick={() => {
               dispatch(setShowCustomerAppointmentModal(true));
@@ -82,7 +83,7 @@ export default function Layout({
           >
             Add Appointment
           </span>
-        )} */}
+        )}
       </div>
 
       {showSearch && <SearchPopup open={showSearch} />}
@@ -90,6 +91,7 @@ export default function Layout({
       {userGuidanceModal && <UserGuidence open={userGuidanceModal} />}
 
       {settingBussinessSetUp && <SetUpBussinessModal open={settingBussinessSetUp} />}
+      {open && <StoreListModal />}
     </Box>
   );
 }

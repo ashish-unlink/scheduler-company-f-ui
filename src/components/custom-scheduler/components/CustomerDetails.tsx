@@ -4,7 +4,7 @@ import { genderOptions } from "../data";
 import AppointmentSelectBox2 from "../../appointment-popup/AppointmentSelectBox2";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { addCustomer } from "../../../redux/users/action";
+import { addCustomer, updateCusomer } from "../../../redux/users/action";
 import { useAppDispatch, useAppSelector } from "../../../redux";
 import { constantString } from "../../../utils/constantString";
 import {
@@ -14,18 +14,20 @@ import {
   nameSchema,
 } from "../../../utils/validation";
 import { MobilePhoneInput } from "../../mobile-input/MobileInput";
-import { selectOpenAddCustomerPopup } from "../../../redux/users/selector";
-import { setOpenAddCustomerPopup } from "../../../redux/users/slice";
+import {
+  selectLoading,
+  selectOpenAddCustomerPopup,
+} from "../../../redux/users/selector";
 import { useTranslation } from "react-i18next";
 import "./style.css";
 import { useCompanyData } from "../../hooks/useCompanyData";
+import CircularLoader from "../../loading/CircularLoader";
 
 const AddCustomer = () => {
   const dispatch = useAppDispatch();
   const company_id = useCompanyData();
-  // const isLoading = useAppSelector(selectLoading);
-  const openAddCustomerPopup = useAppSelector(selectOpenAddCustomerPopup);
-
+  const editCustomer = useAppSelector(selectOpenAddCustomerPopup);
+  const isLoading = useAppSelector(selectLoading);
   const { t } = useTranslation();
 
   const validationSchema = Yup.object({
@@ -37,11 +39,11 @@ const AddCustomer = () => {
   });
 
   const initialValues = {
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNumber: "",
-    gender: "",
+    firstName: editCustomer?.firstName ?? "",
+    lastName: editCustomer?.lastName ?? "",
+    email: editCustomer?.email ?? "",
+    phoneNumber: editCustomer?.phoneNumber ?? "",
+    gender: editCustomer?.gender ?? "",
   };
 
   const formik = useFormik({
@@ -49,14 +51,18 @@ const AddCustomer = () => {
     validationSchema: validationSchema,
     onSubmit: (values) => {
       const body = {
+        ...(editCustomer && { id: editCustomer?.id }),
         firstName: values?.firstName,
         lastName: values?.lastName,
         ...(values?.email && { email: values?.email }),
         phoneNumber: values?.phoneNumber,
         gender: values?.gender,
       };
-      dispatch(addCustomer({ body, id: company_id }));
-      dispatch(setOpenAddCustomerPopup(false));
+      {
+        editCustomer
+          ? dispatch(updateCusomer({ body, id: company_id }))
+          : dispatch(addCustomer({ body, id: company_id }));
+      }
     },
   });
 
@@ -72,24 +78,17 @@ const AddCustomer = () => {
     touched,
   } = formik;
 
-  useEffect(() => {
-    if (
-      values?.firstName &&
-      values?.lastName &&
-      values?.phoneNumber &&
-      values?.gender &&
-      openAddCustomerPopup
-    ) {
-      submitForm();
-    }
-  }, [openAddCustomerPopup]);
+
 
   return (
     <>
-      <div className="popup-wrapper customer-add-pops">
+    {isLoading && <CircularLoader />}
+      <div
+        className={`popup-wrapper customer-add-pops edit-customer-popup`}
+      >
         <form onSubmit={handleSubmit}>
           <div className="mt-1">
-            <h3>ADD NEW CUSTOMER</h3>
+            {/* {!editCustomer && <h3>ADD NEW CUSTOMER</h3>} */}
             <div
               style={{ display: "flex", gap: "1rem", flexDirection: "column" }}
             >
@@ -159,9 +158,7 @@ const AddCustomer = () => {
                 name="gender"
                 options={genderOptions}
                 onChange={(e) => {
-                  handleChange(e);
-                  // submitForm();
-                  dispatch(setOpenAddCustomerPopup(true));
+                  handleChange(e);          
                 }}
                 placeholder="Male"
                 label={t(constantString.GENDER)}
@@ -170,11 +167,12 @@ const AddCustomer = () => {
                 mandatory
               />
             </div>
-            {/* <center>
+          
+            <center>
                 <button className="mt-3 bg-orange button white verify">
-                  ADD CUSTOMER
+                  {editCustomer ? t(constantString.UPDATE_CUSTOMER) : t(constantString.ADD_CUSTOMER)}
                 </button>
-              </center> */}
+              </center>
           </div>
         </form>
       </div>

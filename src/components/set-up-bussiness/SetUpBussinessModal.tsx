@@ -22,7 +22,7 @@ import {
 import CircularLoader from "../loading/CircularLoader";
 import { setUpBussinessAPI } from "../../redux/meta/action";
 import { bussinessSetupRequest } from "../../utils/types/requestType";
-import { selectOwnerData } from "../../redux/auth/selector";
+import { selectCurrentOutlet, selectOwnerData } from "../../redux/auth/selector";
 import { BsShop } from "react-icons/bs";
 import { LuUser } from "react-icons/lu";
 import { HiOutlineMail } from "react-icons/hi";
@@ -38,6 +38,7 @@ const SetUpBussinessModal = ({ open }: { open: boolean }) => {
   const bussinessSetData = useAppSelector(selectBusinessSetpData);
   const bussinessSetOwnerDetails = useAppSelector(selectOwnerData);
   const isLoading = useAppSelector(selectBussinessLoading);
+  const currentOutlet = useAppSelector(selectCurrentOutlet);  
 
   const customStyle = {
     position: "absolute",
@@ -66,7 +67,7 @@ const SetUpBussinessModal = ({ open }: { open: boolean }) => {
 
   const bussinessData = {
     BUSSINESS_GATEWAY_URL:
-      "https=//2d1uj551b4.execute-api.ap-southeast-1.amazonaws.com/dev/api/v1/hpp/generate/link",
+      "https://2d1uj551b4.execute-api.ap-southeast-1.amazonaws.com/dev/api/v1/hpp/generate/link",
     DASMID: "JP00000328",
     CURRENCY: "JPY",
     SECRET_KEY: "MkxYMTVYcFFfMy1ObkhEemcyVXVZY20zUWRibG9WSUg6",
@@ -167,8 +168,6 @@ const SetUpBussinessModal = ({ open }: { open: boolean }) => {
       const body: bussinessSetupRequest = {
         companyPreferences,
       };
-      console.log("body", body);
-
       dispatch(setUpBussinessAPI(body));
     },
   });
@@ -197,7 +196,7 @@ const SetUpBussinessModal = ({ open }: { open: boolean }) => {
         <div className="user-details-div">
           <div className="user-d-listing">
             <h2>
-              <BsShop /> {bussinessSetOwnerDetails.company[0].title}
+              <BsShop /> {currentOutlet?.title}
             </h2>
             <h3>
               <LuUser />

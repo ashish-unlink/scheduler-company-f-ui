@@ -21,15 +21,17 @@ import { useTranslation } from "react-i18next";
 import "./appointmentStyle.css";
 import { CustomerProfile } from "../customer-profile/CustomerProfile";
 import { DatePick } from "../date-pick";
-import { setOpenAddCustomerPopup } from "../../redux/users/slice";
+import { setEditCustomer, setOpenCustomerModal } from "../../redux/users/slice";
 import dayjs from "dayjs";
 import { List, ListItemText, Typography } from "@mui/material";
 import { useCompanyData } from "../hooks/useCompanyData";
-import { selectCustomerData } from "../../redux/users/selector";
+import { selectCustomerData, selectOpenAddCustomerPopup, selectOpenCustomerModal } from "../../redux/users/selector";
 import { getFormattedDate, sortComments, userName } from "../../utils/general";
 import translateLabel from "../hooks/translationLable";
 import AddCustomer from "../custom-scheduler/components/CustomerDetails";
 import { Link } from "react-router-dom";
+import AppointmentPopupHeader from "../appointment-popup/AppointmentPopupHeader";
+import CustomPopup from "../../custom-popup/CustomPopup";
 
 const CustomerSection = ({ errorState }: { errorState: string }) => {
   const customerUserData: any = useAppSelector(selectCustomerData);
@@ -41,6 +43,21 @@ const CustomerSection = ({ errorState }: { errorState: string }) => {
   const editForm = useAppSelector(selectEditAppointmentForm);
   const ownerData = useAppSelector(selectOwnerData);
   const [openStatusPopup, setOpenStatusPopup] = useState(false);
+  const openCustomerModal = useAppSelector(selectOpenCustomerModal);
+
+  const customStyle = {
+    position: "absolute",
+    top: "0",
+    right: "0",
+    transform: "translate(-50%, -50%)",
+    width: "30%",
+    bgcolor: "background.paper",
+    border: "none",
+    borderRadius: "0",
+    height: "100vh",
+    boxShadow: 24,
+    // p: 4,
+  };
 
   const companyId = useCompanyData();
 
@@ -71,7 +88,7 @@ const CustomerSection = ({ errorState }: { errorState: string }) => {
           <Typography
             variant="subtitle2"
             fontWeight={700}
-            sx={{ textAlign: "center", color:'#5345a1 ', cursor:'pointer', textDecoration:'underline' }}
+            sx={{ textAlign: "center", color:'#0d1542 ', cursor:'pointer', textDecoration:'underline' }}
             onClick={() => {
               dispatch(setAppointmentHistory(selectedClientData));
               // dispatch(setShowCustomerAppointmentModal(false));
@@ -169,17 +186,28 @@ const CustomerSection = ({ errorState }: { errorState: string }) => {
           </div>
           {/* <center>{t(constantString.NO_CLIENT_SELECTED)}</center> */}
           <div className="customer-search-section">
-            <AddCustomer />
-            {/* <center>
-              <img className="not-found" src={notFoundImage} alt="not found" />
-            </center>
+            {/* <AddCustomer /> */}
             <button
               className="orange-button button add-new-customer-button"
-              onClick={() => dispatch(setOpenAddCustomerPopup(true))}
+              onClick={() => dispatch(setOpenCustomerModal(true))}
             >
               {t(constantString.ADD_NEW_CUSTOMER)}
-            </button> */}
+            </button> 
           </div>
+
+          {openCustomerModal && (
+            <CustomPopup open={openCustomerModal} style={customStyle}>
+              <AppointmentPopupHeader
+                onClose={() => {
+                  dispatch(setEditCustomer(null));
+                  dispatch(setOpenCustomerModal(false));
+                }}
+              >
+                <b>{t(constantString.ADD_CUSTOMER)}</b>
+              </AppointmentPopupHeader>
+              <AddCustomer />
+            </CustomPopup>
+          )}
         </>
       )}
     </div>

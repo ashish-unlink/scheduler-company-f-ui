@@ -16,7 +16,7 @@ export const selectEmailVerifyLoading = (state:any) => state.auth.emailVerifyLoa
 
 export const selectDataCounts = (state:any) => state.auth.dataCounts;
 
-
+export const selectCurrentOutlet = (state:any) => state.auth.currentOutletData;
 
 
 

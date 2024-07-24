@@ -205,6 +205,7 @@
   "search":"検索",
 
   "gate_way_url": "ゲートウェイ URL",
-  "x_api_key": "X-API-キー"
+  "x_api_key": "X-API-キー",
 
+  "update_customer":"顧客の更新"
 }

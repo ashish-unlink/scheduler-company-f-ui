@@ -75,3 +75,7 @@
   padding: 10px 10px;
   cursor: pointer;
 }
+
+.edit-customer-popup{
+  padding: 20px 30px !important;
+}

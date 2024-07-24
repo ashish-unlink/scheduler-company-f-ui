@@ -4,6 +4,11 @@ import { validationMessages } from "./constantString";
 
 export const emailSchema = () => {
   return Yup.string()
+    .matches(regx.email, validationMessages.EMAIL_INVALID);
+};
+
+export const registerEmailSchema = () => {
+  return Yup.string()
     .required(validationMessages.EMAIL_REQUIRED)
     .matches(regx.email, validationMessages.EMAIL_INVALID);
 };

@@ -1,0 +1,31 @@
+.select-div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.add-store-btn{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    align-items: center;
+}
+.wrap-store-location{
+    width: 100%;
+    padding: 20px;
+}
+
+.location-input-wrap{
+    margin-bottom: 20px;
+}
+
+.store-address {
+    text-transform: capitalize;
+}
+
+.store-actions{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

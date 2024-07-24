@@ -13,7 +13,12 @@ import { selectShowSearch } from "../../redux/meta/selector";
 import CircularLoader from "../../components/loading/CircularLoader";
 import { useCompanyData } from "../../components/hooks/useCompanyData";
 import { constantString } from "../../utils/constantString";
-import { selectCustomerCount, selectCustomerData } from "../../redux/users/selector";
+import {
+  selectCustomerCount,
+  selectCustomerData,
+  selectOpenAddCustomerPopup,
+  selectOpenCustomerModal,
+} from "../../redux/users/selector";
 import { Tooltip, capitalize } from "@mui/material";
 import { TbHistory } from "react-icons/tb";
 import { setAppointmentHistory } from "../../redux/appointment/slice";
@@ -23,6 +28,12 @@ import { Search } from "../../components/search/Search";
 import { Users } from "../../utils/types/responseType";
 import { fetchUserData } from "../../redux/users/action";
 import { PaginationDatagrid } from "../../components/pagination-datagrid/PaginationDatagrid";
+import "./customerDetailStyle.css";
+import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
+import { setEditCustomer, setOpenCustomerModal } from "../../redux/users/slice";
+import AddCustomer from "../../components/custom-scheduler/components/CustomerDetails";
+import CustomPopup from "../../custom-popup/CustomPopup";
+import AppointmentPopupHeader from "../../components/appointment-popup/AppointmentPopupHeader";
 
 const CustomerDetails = () => {
   const { t } = useTranslation();
@@ -38,6 +49,21 @@ const CustomerDetails = () => {
   const companyId = useCompanyData();
   const [pagination, setPagination] = useState({ page: 0, pageSize: 10 });
   const rowCounts = useAppSelector(selectCustomerCount);
+  const openCustomerModal = useAppSelector(selectOpenCustomerModal);
+
+  const customStyle = {
+    position: "absolute",
+    top: "0",
+    right: "0",
+    transform: "translate(-50%, -50%)",
+    width: "30%",
+    bgcolor: "background.paper",
+    border: "none",
+    borderRadius: "0",
+    height: "100vh",
+    boxShadow: 24,
+    // p: 4,
+  };
 
   const columns: any = [
     {
@@ -125,7 +151,7 @@ const CustomerDetails = () => {
     // },
     {
       field: "action",
-      headerName: "View History",
+      headerName: "Actions",
       sortable: false,
       headerClassName: "appointment-table-header analytics-table-header",
       headerAlign: "center",
@@ -133,14 +159,31 @@ const CustomerDetails = () => {
       flex: 1,
       renderCell: (params: any) => {
         return (
-          <Tooltip title="View past appointments" placement="bottom">
-            <div
-              className="view-action"
-              onClick={() => dispatch(setAppointmentHistory(params?.row))}
-            >
-              <TbHistory style={{ fontSize: 24 }} />
-            </div>
-          </Tooltip>
+          <div className="action-btn-wrap">
+            <Tooltip title="View past appointments" placement="bottom">
+              <div
+                className="view-action"
+                onClick={() => dispatch(setAppointmentHistory(params?.row))}
+              >
+                <TbHistory style={{ fontSize: 24 }} />
+              </div>
+            </Tooltip>
+
+            <Tooltip title="Edit Customer" placement="bottom">
+              <div
+                className="view-action"
+                onClick={() => {
+                  dispatch(setEditCustomer(params?.row));
+                  dispatch(setOpenCustomerModal(true));
+                }}
+              >
+                <EditOutlinedIcon
+                  style={{ fontSize: 24 }}
+                  className="delete-popup-img"
+                />
+              </div>
+            </Tooltip>
+          </div>
         );
       },
     },
@@ -203,7 +246,6 @@ const CustomerDetails = () => {
       />
       <div className="calender-table-wrap">
         <Box sx={{ maxWidth: "100%", maxHeight: "80vh", height: "100vh" }}>
-
           <PaginationDatagrid
             row={filterCustomer}
             columns={columns}
@@ -216,6 +258,20 @@ const CustomerDetails = () => {
 
       {openAppointmentHistory && (
         <AppointmentHistoryModal open={openAppointmentHistory} />
+      )}
+
+      {openCustomerModal && (
+        <CustomPopup open={openCustomerModal} style={customStyle}>
+          <AppointmentPopupHeader
+            onClose={() => {
+              dispatch(setEditCustomer(null));
+              dispatch(setOpenCustomerModal(false));
+            }}
+          >
+            <b>{t(constantString.UPDATE_CUSTOMER)}</b>
+          </AppointmentPopupHeader>
+          <AddCustomer />
+        </CustomPopup>
       )}
     </div>
   );

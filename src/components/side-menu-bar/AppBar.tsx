@@ -19,6 +19,7 @@ import { setSettingBussinessSetUP, setShowSearch } from "../../redux/meta/slice"
 import "./profileStyle.css";
 import { userName } from "../../utils/general";
 import { MdLanguage } from "react-icons/md";
+import { setChangeStoreModal } from "../../redux/multi-store/slice";
 
 const drawerWidth = 80;
 
@@ -36,7 +37,7 @@ const Header = () => {
   return (
     <AppBar
       position="fixed"
-      style={{ background: "#7469B6", color: "#fff" }}
+      style={{ background: "#254007", color: "#fff" }}
       sx={{
         width: `calc(100% - ${drawerWidth}px)`,
         ml: `${drawerWidth}px`,
@@ -97,6 +98,14 @@ const Header = () => {
                     {/* <Link to={PrivatePath.home} className="setting-link"> */}
                       Setting
                     {/* </Link> */}
+                  </li>
+                  <li
+                    onClick={(e) => {
+                      dispatch(setChangeStoreModal(true));
+                    }}
+                    className="header-menu-items setting"
+                  >
+                    {constantString.CHANGE_STORE}
                   </li>
                   <li className="header-menu-items">
                     <button

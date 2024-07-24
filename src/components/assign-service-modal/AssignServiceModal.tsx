@@ -154,7 +154,6 @@ const AssignServiceModal = ({ open }: { open: boolean }) => {
                 name="selectAllCategoryServices"
                 checked={values?.selectAllCategoryServices}
                 onChange={(e) => {
-                  console.log("eeee", e?.target?.checked);
                   handleChange(e);
                   if (e?.target?.checked == true) {
                     let srvdata: ServiceListItem[] = [];

@@ -11,3 +11,5 @@ export const attendenceStatus: any = {
   present: "Present",
   leave: "Leave",
 };
+
+export const storeStatus = [{label:"Open", value:"open"}, {label:"Closed", value:"closed"}];

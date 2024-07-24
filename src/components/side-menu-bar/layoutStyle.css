@@ -53,7 +53,7 @@ hr{
 }
 
 .log-out-wrap {
-  margin: 10px 0px;
+  /* margin: 10px 0px; */
   /* padding-left: 10px;
   padding-right: 10px; */
 }
@@ -79,7 +79,7 @@ li.menu-item svg {
 }
 
 .header-menu-items {
-  padding: 0px 15px 5px;
+  padding: 8px 15px 8px;
 }
 
 
@@ -91,4 +91,28 @@ li.menu-item svg {
 .setting{
   border-bottom: 1px solid #e8e2e2;
   cursor: pointer;
+}
+
+
+.store-container {
+  padding: 30px;
+}
+
+.store-item {
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.active-store {
+  background-color: rgb(37, 125, 240);
+  color: #fff;
+  opacity: 0.9;
+}
+
+.view-store-location{
+  font-style:italic;
+  font-size: small;
 }

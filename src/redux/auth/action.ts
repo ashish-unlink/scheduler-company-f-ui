@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { ENDPOINTS } from "../../network/ENDPOINT";
 import { patchAPI, postAPI } from "../../network/Api";
-import { Users } from "../../utils/types/responseType";
+import { BusinessLocation, Users } from "../../utils/types/responseType";
 import { loginRequest, signupRequest } from "../../utils/types/requestType";
 import {
   authenticate,
@@ -20,6 +20,7 @@ import { messages } from "../../utils/messages";
 import translateLabel from "../../components/hooks/translationLable";
 import { NavigateFunction } from "react-router-dom";
 import { PublicPath } from "../../components/constants/routes.c";
+import { fetchMultiStoreList } from "../multi-store/action";
 
 export const loginAPI = createAsyncThunk<Users, loginRequest>(
   apiSignature.AUTH_LOGIN,
@@ -29,14 +30,16 @@ export const loginAPI = createAsyncThunk<Users, loginRequest>(
       const response = await postAPI(ENDPOINTS.LOGIN, values);
       if (response?.success) {
         const result = response?.data;
-        const companyId = result?.company?.[0]?.id;
+        const ownerId = result?.ownerBusiness?.ownerId;
+        const companyId = result?.ownerBusiness?.businessLocations?.find((i:BusinessLocation)=> {return i?.isPrimaryCompany == true})?.id;
         const countData = result?.companyData;
         setTimeout(() => {
-          dispatch(fetchUserData({companyId}));
+          dispatch(fetchUserData({ companyId }));
           dispatch(fetchServiceList({ id: companyId }));
           dispatch(fetchEmployeeData(companyId));
           dispatch(fetchCountryList());
           dispatch(fetchBussinessPreferenceList(companyId));
+          dispatch(fetchMultiStoreList(ownerId));
           dispatch(
             setCountData({
               employeeCount: countData?.employeeCount,
@@ -46,15 +49,8 @@ export const loginAPI = createAsyncThunk<Users, loginRequest>(
             })
           );
           dispatch(authenticate(true));
-          dispatch(
-            setShowAlert({
-              message: translateLabel(
-                messages?.[response?.messageCode]?.message
-              ),
-              type: "success",
-            })
-          );
         }, 10);
+      // dispatch(setMultiStoreList(result?.ownerBusiness));
         return result;
       } else {
         throw response;

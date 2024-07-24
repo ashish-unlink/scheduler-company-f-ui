@@ -35,4 +35,10 @@ export const ENDPOINTS = {
   GET_COMMISSION_API: "employee-commission/employee-list",
   SEND_PAYMENT_LINK: "appointment/transaction/v1/generate/gateway/link",
   GET_PAYMENT_TRANSACTION: "appointment/transaction/list",
+  GET_MULTI_STORE_API:'ownerBusiness/store/list',
+  ADD_STORE_API:'companies/management',
+  EDIT_STORE_API:'companies/management',
+  BUSSINESS_COUNT_API:'companies/statistics',
+  ADD_STORE_LOCATION:"companies/manageAddress",
+  UPDATE_CUSTOMER_API:"companies/createclient"
 };
