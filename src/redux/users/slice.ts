@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { addCustomer, fetchUserData, isUserVerify } from "./action";
+import { addCustomer, fetchUserData, isUserVerify, updateCusomer } from "./action";
 import { Users } from "../../utils/types/responseType";
+import { customerRegisterRequest } from "../../utils/types/requestType";
 
 interface userSliceProps {
-  openAddCustomerPopup: boolean;
 
   addCustomerLoading: boolean;
 
@@ -12,10 +12,12 @@ interface userSliceProps {
   customerUserData: Users[];
 
   customerCount: number;
+
+  editCustomerData: customerRegisterRequest | null;
+  isOpenCustomerUserData:boolean;
 }
 
 const initialState: userSliceProps = {
-  openAddCustomerPopup: false,
   addCustomerLoading: false,
 
   recentlyAddedCustomerData: null,
@@ -25,6 +27,9 @@ const initialState: userSliceProps = {
   // client user
   customerUserData: [],
   customerCount: 0,
+
+  editCustomerData: null,
+  isOpenCustomerUserData:false,
 };
 
 // createSlice
@@ -32,12 +37,21 @@ export const userSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    setOpenAddCustomerPopup: (state, action) => {
-      state.openAddCustomerPopup = action.payload;
-    },
+ 
     setCustomerCount: (state, action) => {
       state.customerCount = action.payload;
     },
+    setEditCustomer: (state, action) => {
+      state.editCustomerData = action.payload;
+    },
+    setUpdatedCustomerData: (state, action) => {
+      state.customerUserData = action.payload;
+    },
+    setOpenCustomerModal: (state, action) => {
+      state.isOpenCustomerUserData = action.payload;
+    },
+    
+  
   },
   extraReducers: (builder) => {
     // add customer data
@@ -78,8 +92,21 @@ export const userSlice = createSlice({
     builder.addCase(isUserVerify.rejected, (state) => {
       state.customerUserLoading = false;
     });
+
+    // updateCusomer customer data
+    builder.addCase(updateCusomer.pending, (state) => {
+      state.addCustomerLoading = true;
+    });
+    builder.addCase(updateCusomer.fulfilled, (state, action) => {
+      state.addCustomerLoading = false;
+    });
+    builder.addCase(updateCusomer.rejected, (state) => {
+      // state.auth = false;
+      state.addCustomerLoading = false;
+    });
   },
 });
 
-export const { setOpenAddCustomerPopup, setCustomerCount } = userSlice.actions;
+export const {  setCustomerCount, setEditCustomer ,setUpdatedCustomerData, setOpenCustomerModal} =
+  userSlice.actions;
 export default userSlice.reducer;

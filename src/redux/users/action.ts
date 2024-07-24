@@ -8,7 +8,7 @@ import {
 } from "../../utils/types/requestType";
 import { setShowAlert } from "../meta/slice";
 import { apiSignature } from "./api-signature";
-import { setCustomerCount, setOpenAddCustomerPopup } from "./slice";
+import { setCustomerCount, setEditCustomer, setOpenCustomerModal, setUpdatedCustomerData } from "./slice";
 import { setSelectedClient } from "../appointment/slice";
 import { messages } from "../../utils/messages";
 import { checkMessage } from "../../utils/general";
@@ -21,7 +21,9 @@ export const fetchUserData = createAsyncThunk<
   const { dispatch } = thunkAPI;
   try {
     const response = await getAPI(
-      `${ENDPOINTS.USER_API}?companyId=${companyId}&role=client${paginationUrl != undefined ? paginationUrl : ''}`
+      `${ENDPOINTS.USER_API}?companyId=${companyId}&role=client${
+        paginationUrl != undefined ? paginationUrl : ""
+      }`
     );
     if (response?.success) {
       const result = response.data;
@@ -57,8 +59,8 @@ export const addCustomer = createAsyncThunk<Users, customerRegisterRequest>(
             type: "success",
           })
         );
-        dispatch(setOpenAddCustomerPopup(false));
-
+        dispatch(setEditCustomer(null));
+        dispatch(setOpenCustomerModal(false));
         // if (result?.role == "client") {
         // state.customerUserData = [...state?.customerUserData, action.payload];
         dispatch(setSelectedClient(result));
@@ -119,6 +121,47 @@ export const isUserVerify = createAsyncThunk<void, string>(
       // dispatch(
       //   setShowAlert({ message: error.response?.data?.message, type: "error" })
       // );
+      checkMessage(error);
+    }
+  }
+);
+
+export const updateCusomer = createAsyncThunk<Users, customerRegisterRequest>(
+  apiSignature.USER_UPDATE_CUSTOMER,
+  async (props: customerRegisterRequest, thunkAPI) => {
+    const { body, id } = props;
+
+    const { dispatch, getState } = thunkAPI;
+    const data: any = getState();
+    const temp = [ ...data?.users?.customerUserData];
+
+    try {
+      const response = await postAPI(
+        `${ENDPOINTS.UPDATE_CUSTOMER_API}/${id}`,
+        body
+      );
+      if (response?.success) {
+        
+        const result = response?.data;
+        const updateData = temp?.map((item:Users)=>{
+          if(item?.id === result?.id){
+            return result;
+          }
+          return item;
+        })
+
+        dispatch(setUpdatedCustomerData(updateData))
+        dispatch(setEditCustomer(null));
+        dispatch(setOpenCustomerModal(false));
+        dispatch(
+          setShowAlert({
+            message: translateLabel(messages?.[response?.messageCode]?.message),
+            type: "success",
+          })
+        );
+        return result;
+      }
+    } catch (error) {
       checkMessage(error);
     }
   }

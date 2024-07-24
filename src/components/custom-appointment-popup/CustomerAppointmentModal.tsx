@@ -7,14 +7,12 @@ import { useAppDispatch, useAppSelector } from "../../redux";
 import CustomerSection from "./CustomerSection";
 import { AppointmentSection } from "./AppointmentSection";
 import { useTranslation } from "react-i18next";
-import { selectOpenAddCustomerPopup } from "../../redux/users/selector";
 import AddCustomer from "../custom-scheduler/components/CustomerDetails";
 import AppointmentHistoryModal from "../appointment-history/AppointmentHistory";
 import { selectAppointmentHistory } from "../../redux/appointment/selector";
 
 const CustomerAppointmentModal = ({ open, onClose }: any) => {
   const { t } = useTranslation();
-  const openAddCustomerPopup = useAppSelector(selectOpenAddCustomerPopup);
   const [errorState, setErrorState] = useState<string>("");
   const openAppointmentHistory = useAppSelector(selectAppointmentHistory);
 

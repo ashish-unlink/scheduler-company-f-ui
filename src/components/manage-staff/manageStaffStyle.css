@@ -6,3 +6,8 @@
     width: 100%;
     height: 75vh;
 }
+
+.wrap-store-text-area{
+    padding: 0px 32px;
+    margin-bottom: 20px;
+}

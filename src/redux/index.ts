@@ -3,7 +3,7 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import localStorage from "redux-persist/es/storage";
 import { selectedServiceSlice } from "./selectedService";
 import { serviceDataSlice } from "./serviceData";
-import { authSlice, resetProfile } from "./auth/slice";
+import { authSlice, clearRedux, resetProfile } from "./auth/slice";
 import {
   FLUSH,
   REHYDRATE,
@@ -24,6 +24,7 @@ import { appointmentSlice } from "./appointment/slice";
 import { logout } from "./auth/action";
 import { reportSlice } from "./report/slice";
 import { attendenceSlice } from "./attendence/slice";
+import { multiStoreSlice } from "./multi-store/slice";
 
 const persistConfig = {
   key: "root",
@@ -52,12 +53,14 @@ const rootReducer = combineReducers({
   appointment: appointmentSlice.reducer,
   report: reportSlice.reducer,
   attendence: attendenceSlice.reducer,
+  multiStore: multiStoreSlice.reducer,
 });
 
 const appReducer = (state: any, action: any) => {
   if (
     action.type === resetProfile.type ||
-    action.type === logout.fulfilled.type
+    action.type === logout.fulfilled.type ||
+    action.type === clearRedux.type
   ) {
     state = undefined; // Reset state to initial state on logout
   }

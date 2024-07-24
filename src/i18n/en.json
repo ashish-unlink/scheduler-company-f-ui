@@ -233,6 +233,8 @@
   "gate_way_url": "Gateway Url",
   "x_api_key": "X-API-KEY",
 
+  "update_customer":"Update Customer",
+
   "ERR0000": "Something went wrong. Please try again.",
   "ERR0001": "Access denied..!",
   "ERR0002": "The username is already register with us.",

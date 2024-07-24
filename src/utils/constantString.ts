@@ -210,7 +210,20 @@ export const constantString = {
   SEARCH:'search',
 
   GATE_WAY_URL:'gate_way_url',
-  X_API_KEY:'x_api_key'
+  X_API_KEY:'x_api_key',
+
+
+  ADD_STORE:"Add Store",
+  UPDATE_STORE:"Update Store",
+  STORE_STATUS:"Store Status",
+
+  DASHBOARD:"dashboard",
+  MULTI_STORE:"Multi Store",
+  ADD_LOCATION:"Add Location",
+  UPDATE_STORE_LOCATION:"Update Location",
+  DELETE_STORE:"Delete Store",
+  CHANGE_STORE:"Change Store",
+  UPDATE_CUSTOMER:"update_customer"
 };
 
 export const validationMessages = {

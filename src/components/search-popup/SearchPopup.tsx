@@ -68,11 +68,6 @@ const SearchPopup = ({ open }: { open: boolean }) => {
     initialValues: initialValues,
     enableReinitialize: true,
     onSubmit: (values) => {
-      console.log("vvvvvv", [
-        dayjs(values?.startDate).format("YYYY-MM-DD"),
-        dayjs(values?.endDate).format("YYYY-MM-DD"),
-      ]);
-
       const url = `${
         values?.customerFirstName != ""
           ? "&clientFirstName=" + values?.customerFirstName

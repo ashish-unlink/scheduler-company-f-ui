@@ -181,3 +181,33 @@ export interface paymentRequestProps {
     amountReceived: number | undefined;
   };
 }
+
+export interface AddEditMultiStoreType {
+  id?: string,
+  title: string,
+  content: string,
+  status: string,
+  ownerId: string,
+  openTime: string,
+  closeTime: string,
+  contactName: string,
+  contactEmail: string,
+  contactPhone: string,
+}
+
+export interface RequestAddEditMultiStore{
+  body:AddEditMultiStoreType;
+  companyId:string;
+ }
+
+ export interface AddAddressRequest{
+    id?:string;
+    addressType: string,
+    city: string,
+    postal: string | number,
+    region: string,
+    state: string,
+    street: string,
+    countryId: any,
+    companyId: string
+ }

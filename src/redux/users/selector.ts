@@ -1,4 +1,3 @@
-export const selectOpenAddCustomerPopup = (state:any) => state.users.openAddCustomerPopup;
 
 
 export const selectRecentlyAddedCustomer = (state:any) => state.users.recentlyAddedCustomerData;
@@ -10,3 +9,5 @@ export const selectCustomerLoading = (state:any) => state.users.customerUserLoad
 
 export const selectCustomerCount = (state:any) => state.users.customerCount;
 
+export const selectOpenAddCustomerPopup = (state:any) => state.users.editCustomerData;
+export const selectOpenCustomerModal = (state:any) => state.users.isOpenCustomerUserData;

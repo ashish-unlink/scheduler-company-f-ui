@@ -71,7 +71,7 @@ const AddStaffModal = ({ open }: { open: boolean }) => {
   const validationSchema = Yup.object({
     first_name: nameSchema("First Name"),
     last_name: nameSchema("Last Name"),
-    // email: emailSchema(),
+    email: emailSchema(),
     mobile: customerPhoneSchema(),
     // employee_code: requiredSchema("Employee Code"),
     gender: genderSchema(),
@@ -242,7 +242,7 @@ const AddStaffModal = ({ open }: { open: boolean }) => {
                   value={values.email}
                   onBlur={handleBlur}
                   maxLength={50}
-                  // error={touched.email && errors.email}
+                  error={touched.email && errors.email}
                   // mandatory
                 />
               </div>

@@ -54,7 +54,7 @@ ul {
 }
 
 .color-orange {
-  color: #5345a1;
+  color: #0d1542;
 }
 
 .w-40 {
@@ -109,11 +109,11 @@ ul {
 }
 
 .bg-orange {
-  background: #5345a1;
+  background: #0d1542;
 }
 
 .color-orange {
-  color: #5345a1;
+  color: #0d1542;
 }
 
 .mt-2 {
@@ -130,9 +130,9 @@ ul {
 }
 
 button.MuiPickersDay-root.Mui-selected {
-  color: #5345a1 !important;
+  color: #0d1542 !important;
   background: #e3eaf9 !important;
-  border: 1px solid #5345a1 !important
+  border: 1px solid #0d1542 !important
 }
 
 button.MuiPickersDay-root.Mui-disabled {
@@ -142,7 +142,7 @@ button.MuiPickersDay-root.Mui-disabled {
 }
 
 button.MuiPickersYear-yearButton.Mui-selected, button.MuiPickersMonth-monthButton.Mui-selected {
-  background: #5345a1 !important;
+  background: #0d1542 !important;
 }
 
 button.MuiPickersYear-yearButton.Mui-selected:hover, button.MuiPickersMonth-monthButton.Mui-selected:hover {
@@ -156,7 +156,7 @@ button.MuiPickersYear-yearButton.Mui-selected:hover, button.MuiPickersMonth-mont
 
 .profile-user p.profile-text {
   font-weight: 600;
-  color: #5345a1;
+  color: #0d1542;
   font-size: 1.2em;
   overflow: hidden;
   white-space: nowrap;
@@ -180,7 +180,7 @@ td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium.Cell-cell.Cell-br
   padding: 15px 12px;
   top: 0px;
   vertical-align: middle;
-  color: #5345a1;
+  color: #0d1542;
   cursor: pointer;
   width: 100%;
   height: 100%;
@@ -197,7 +197,7 @@ td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium.Cell-cell.Cell-br
   top: 0px;
   right: 10px;
   vertical-align: middle;
-  color: #5345a1;
+  color: #0d1542;
   cursor: pointer;
   width: 100%;
   height: 100%;
@@ -227,7 +227,7 @@ td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium.Cell-cell.Cell-br
   border-radius: 2px 2px 2px 2px;
   padding: 4px 0 !important;
   align-items: flex-start;
-  color: #5345a1;
+  color: #0d1542;
 } */
 .MuiBadge-root span.MuiBadge-badge {
   padding: 5px 0 !important;
@@ -273,7 +273,7 @@ td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium.Cell-cell.Cell-br
   color: #fff;
   padding: 9px 15px 6px 15px;
   margin: 0 -20px 0 -10px;
-  background: #5345a1;
+  background: #052a41;
 }
 
 .appointment-status-list ul {
@@ -312,7 +312,7 @@ td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium.Cell-cell.Cell-br
 }
 
 .service-flating-point span.add-app-span {
-  background: #5345a1;
+  background: #0d1542;
   position: relative;
   left: -5px;
   color: #fff;
@@ -345,12 +345,12 @@ td.MuiTableCell-root.MuiTableCell-body.MuiTableCell-sizeMedium.Cell-cell.Cell-br
   text-transform: uppercase;
   font-size: .95rem;
   cursor: pointer;
-  color: #5345a1;
+  color: #0d1542;
   font-weight: 600;
 }
 
 .appointment-status-list ul li span:hover {
-  color: #5345a1;
+  color: #0d1542;
   font-weight: 600;
 }
 
@@ -416,7 +416,7 @@ main .MuiToolbar-regular {
 .popup-wrapper.customer-add-pops h3 {
   font-size: 1em;
   margin: 0 0 12px 0;
-  color: #5345a1;
+  color: #0d1542;
 }
 
 .popup-wrapper.customer-add-pops .appointment-input-label, .popup-wrapper.customer-add-pops .text-wrap label, .popup-wrapper.customer-add-pops .MuiFormControl-root label {
@@ -431,7 +431,7 @@ main .MuiToolbar-regular {
 }
 
 .appointment-table-header.analytics-table-header, .appointment-modal-table-header.analytics-table-header {
-  background: #5345a1 !important;
+  background: #0d1542 !important;
   color: #fff !important;
   margin: 0 0 0 0 !important;
 }
@@ -556,9 +556,21 @@ li.MuiListItem-root.MuiListItem-gutters.menu-item.active {
   right: 0;
 }
 .save-attendence-div-button button {
-  background: #5345a1;
+  background: #0d1542;
 }
 
 .wrap-table .MuiDataGrid-root.MuiDataGrid-root--densityStandard {
   height: 57vh;
 }
+
+.multi-store-drawer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+}
+label{
+  position: relative;
+  display: block !important;
+  }

@@ -13,7 +13,7 @@ interface AppoinmentSelectBoxProps {
   onBlur?:()=>void;
   placeholder:string;
   error?:any ;
-  value: string | number | (string | number)[];
+  value: any;
   mandatory?:boolean;
 }
 
@@ -47,13 +47,13 @@ export default function AppointmentSelectBox2({
             borderColor: "d4d4d4",
           },
           "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-            borderColor: "#7469B6",
+            borderColor: "#FF9D0B",
           },
           "&:hover .MuiOutlinedInput-notchedOutline": {
-            borderColor: "#7469B6",
+            borderColor: "#FF9D0B",
           },
           // "&.Mui-focused .MuiSvgIcon-root ": {
-          //   fill: "#7469B6 !important",
+          //   fill: "#FF9D0B !important",
           // },
         }}
         name={name}

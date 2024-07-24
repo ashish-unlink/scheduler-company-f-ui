@@ -7,13 +7,6 @@ export interface UserDataResponse {
 }
 
 export interface Users {
-  products: string;
-  customer: string;
-  value: string;
-  city: string;
-  categry: string;
-  number: string;
-  name: string;
   createdAt: string;
   createdBy: string;
   email: string;
@@ -30,10 +23,35 @@ export interface Users {
   updatedAt: string;
   updatedBy: string;
   username: string;
-  companyId: string;
-  company?: CompanyDataProps[];
+  // companyId: string;
   companyData: countDataProps;
   token?: string;
+  deletedAt?: any;
+  password: string;
+  dateOfBirth?: any;
+  emplStartDate?: any;
+  emplEndDate?: any;
+  emplDesig?: any;
+  emplCode?: any;
+  emplDesc?: any;
+  aadharCard?: any;
+  panCard?: any;
+  isEmplPermanent?: any;
+  ownerBusiness: OwnerBusiness;  
+}
+export interface OwnerBusiness {
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  createdBy: string;
+  updatedBy?: any;
+  deletedAt?: any;
+  title: string;
+  slug: string;
+  content?: any;
+  businessType: string;
+  ownerId: string;
+  businessLocations: BusinessLocation[];
 }
 
 export interface UserStaffs {
@@ -377,4 +395,48 @@ export interface TxnItem {
   gatewayPblId?: string;
   apmtTxnId: string;
   txnTime:string | null;
+}
+
+export interface ResponseMultiStore {
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  createdBy: string;
+  updatedBy?: any;
+  deletedAt?: any;
+  title: string;
+  slug: string;
+  content?: any;
+  businessType: string;
+  status:string;
+  ownerId: string;
+  owner: Users | null;
+  openTime: string,
+  closeTime: string,
+  contactName: string,
+  contactEmail: string,
+  contactPhone: string,
+  businessLocations: BusinessLocation[];
+}
+export interface BusinessLocation {
+  id: string;
+  createdAt: string;
+  updatedAt: string;
+  createdBy?: string;
+  updatedBy?: any;
+  deletedAt?: any;
+  title: string;
+  slug: string;
+  content: string;
+  isPrimaryCompany: boolean;
+  mainBusinesId: string;
+  status: string;
+  companyAddress?: Address;  
+  mainBusines?:ResponseMultiStore;
+  openTime: string;
+  closeTime: string;
+  contactName: string;
+  contactEmail: string;
+  contactPhone: string;
+  
 }

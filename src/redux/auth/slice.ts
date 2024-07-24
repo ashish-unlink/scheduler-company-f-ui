@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { emailVerification, fetchSignupAPI, loginAPI } from "./action";
-import { Users } from "../../utils/types/responseType";
+import { BusinessLocation, Users } from "../../utils/types/responseType";
 import store from "..";
 import {
   AddAppointmentDataProps,
@@ -24,6 +24,7 @@ interface authSliceProps {
   isRegisterSuccess: boolean;
 
   dataCounts: countDataProps;
+  currentOutletData:BusinessLocation | null;
 }
 
 const initialState: authSliceProps = {
@@ -52,6 +53,8 @@ const initialState: authSliceProps = {
     appointmentCount: 0,
     bussinessSetUpDataCount: 0,
   },
+
+  currentOutletData:null,
 };
 
 // createSlice
@@ -64,6 +67,9 @@ export const authSlice = createSlice({
     },
     resetProfile: (state) => {
       state.auth = false;
+    },
+    clearRedux: (state) => {
+      state.auth = true;
     },
     setShowOTPModal: (state, action) => {
       state.showOTPModal = action.payload;
@@ -78,6 +84,18 @@ export const authSlice = createSlice({
 
     setCountData: (state, action) => {
       state.dataCounts = { ...state.dataCounts, ...action.payload };
+    },
+
+    setOwnerData: (state, action) => {
+      state.ownerData = action.payload;
+    },
+
+    setCurrentOutlet: (state, action) => {
+      state.currentOutletData = action.payload;
+    },
+
+    setToken: (state, action) => {
+      state.token = action.payload;
     },
   },
   extraReducers: (builder) => {
@@ -133,5 +151,9 @@ export const {
   setEmailVerification,
   setResgisterSuccess,
   setCountData,
+  setOwnerData,
+  clearRedux,
+  setCurrentOutlet,
+  setToken,
 } = authSlice.actions;
 export default authSlice.reducer;
