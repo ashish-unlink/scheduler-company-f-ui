@@ -38,6 +38,7 @@ const persistConfig = {
     "appointment",
     "meta",
     "report",
+    "multiStore"
   ],
   // Other configuration options can be added here
 };
