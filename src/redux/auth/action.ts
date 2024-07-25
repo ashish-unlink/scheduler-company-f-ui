@@ -7,6 +7,7 @@ import {
   authenticate,
   resetProfile,
   setCountData,
+  setCurrentOutlet,
   setShowOTPModal,
 } from "./slice";
 import { apiSignature } from "./api-signature";
@@ -31,14 +32,16 @@ export const loginAPI = createAsyncThunk<Users, loginRequest>(
       if (response?.success) {
         const result = response?.data;
         const ownerId = result?.ownerBusiness?.ownerId;
-        const companyId = result?.ownerBusiness?.businessLocations?.find((i:BusinessLocation)=> {return i?.isPrimaryCompany == true})?.id;
+        const mainStore = result?.ownerBusiness?.businessLocations?.find((i:BusinessLocation)=> {return i?.isPrimaryCompany == true});
         const countData = result?.companyData;
+
+        dispatch(setCurrentOutlet(mainStore))
         setTimeout(() => {
-          dispatch(fetchUserData({ companyId }));
-          dispatch(fetchServiceList({ id: companyId }));
-          dispatch(fetchEmployeeData(companyId));
+          dispatch(fetchUserData({ companyId :mainStore?.id }));
+          dispatch(fetchServiceList({ id: mainStore?.id }));
+          dispatch(fetchEmployeeData(mainStore?.id));
           dispatch(fetchCountryList());
-          dispatch(fetchBussinessPreferenceList(companyId));
+          dispatch(fetchBussinessPreferenceList(mainStore?.id));
           dispatch(fetchMultiStoreList(ownerId));
           dispatch(
             setCountData({

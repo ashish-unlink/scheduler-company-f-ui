@@ -13,7 +13,7 @@
 .wrap-staff-field {
   display: flex;
   justify-content: flex-start;
-  gap: 8px;
+  gap: 14px 8px;
   align-items: flex-start;
   margin-top: 15px;
   width: 100%;
@@ -56,7 +56,7 @@ button.MuiButtonBase-root.MuiTab-root.MuiTab-textColorPrimary{
     font-weight: 500;
 }
 .contained-btn {
-  background-color: #AD88C6 !important;
+  background-color: #346be3 !important;
   box-shadow: none !important;
   font-size: 13px;
   font-weight: 600 !important;
@@ -111,6 +111,8 @@ button.MuiButtonBase-root.Mui-selected {
   font-weight: 600;
   color: #757575;
   text-transform: uppercase;
+  position: relative;
+  display: block;
 }
 
 .top-margin{
