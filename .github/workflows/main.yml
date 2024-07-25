@@ -1,5 +1,5 @@
 env:
-  REACT_APP_API_URL: 'https://vljrc1aep0.execute-api.ap-southeast-1.amazonaws.com/uat/f/api/v1/scheduler/'
+  REACT_APP_API_URL: 'https://vljrc1aep0.execute-api.ap-southeast-1.amazonaws.com/uat/c/api/v1/scheduler-f/'
   REACT_APP_X_API_KEY: 'bLm8c1C0fL3FtPzrjSr0'
  
 # This is a basic workflow to help you get started with Actions
