@@ -78,6 +78,7 @@
 
 .email-text{
   text-transform: lowercase;
+  word-wrap: break-word;
 }
 
 .title-text-right-div {

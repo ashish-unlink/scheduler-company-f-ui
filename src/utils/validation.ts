@@ -16,7 +16,6 @@ export const registerEmailSchema = () => {
 export const nameSchema = (name: string) => {
   return Yup.string()
     .required(`${name} ${validationMessages.NAME_REQUIRED}`)
-    .matches(regx.name, `${validationMessages.NAME_INVALID} ${name}`)
     .trim();
 };
 
