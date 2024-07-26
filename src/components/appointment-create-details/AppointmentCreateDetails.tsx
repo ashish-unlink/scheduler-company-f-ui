@@ -131,6 +131,7 @@ export const AppointmentCreateDetails = ({
     // enableReinitialize: true,
     validationSchema: validationSchema,
     onSubmit: (values, { resetForm }) => {
+      
       if (values?.staff && values?.services && values?.startTime) {
         dispatch(
           fetchAppointmentTimeBlockAPI({
@@ -206,7 +207,7 @@ export const AppointmentCreateDetails = ({
     if (values?.services) {
       const appShiftDataLength = appointmentFilterData?.length;
       const selectedTime = dayjs(updateStartTime).format("HH:mm:ss");
-
+      
       if (appShiftDataLength) {
         const allSheduledData = appointmentFilterData?.map((item: any) => {
           if (item?.status == "present") {
@@ -223,43 +224,103 @@ export const AppointmentCreateDetails = ({
               return false;
             }
           } else {
-            return false;
+            return "absent";
           }
         });
-
         if (allSheduledData.some((bool: boolean) => bool === true)) {
-          const filterData = appointmentFilterData?.[0]?.apptBkgData;
-          if (filterData) {
-            const confirmAppointment = Object.entries(filterData)?.map(
-              ([key, val], index) => {
-                const startTime = filterData[key]?.empSvcBkgStartTime;
-                const endTime = filterData[key]?.empSvcBkgEndTime;
-                if (startTime > selectedTime) {
-                  return true;
-                } else if (startTime < selectedTime && endTime > selectedTime) {
-                  return false;
-                } else if (endTime < selectedTime) {
-                  return true;
-                }
-              }
-            );
+          
+          if (appointmentFilterData?.length > 0) {
+            appointmentFilterData?.map(
+              (i: ResopnseAppointmentBlockData, index: number) => {
+                const filterData = appointmentFilterData?.[index]?.apptBkgData;
 
-            if (confirmAppointment.every((bool) => bool === true)) {
-              getAppointmentObject();
-            } else {
-              dispatch(
-                setDoubleAppointmentPopup({
-                  heading: "Overlapping Appointment Alert!",
-                  title:
-                    "This time slot overlaps with another appointment for this employee.",
-                })
-              );
+                if (filterData && Object.keys(filterData).length > 0) {
+                  const confirmAppointment = Object.entries(filterData)?.map(
+                    ([key, val]) => {
+                      const startTime = filterData[key]?.empSvcBkgStartTime;
+                      const endTime = filterData[key]?.empSvcBkgEndTime;
+                      if (startTime > selectedTime) {
+                        return true;
+                      } else if (
+                        startTime < selectedTime &&
+                        endTime > selectedTime
+                      ) {
+                        return false;
+                      } else if (endTime < selectedTime) {
+                        return true;
+                      }
+                    }
+                  );
+
+
+                  if (confirmAppointment.every((bool) => bool === true)) {
+                    getAppointmentObject();
+                  } else {
+                    dispatch(
+                      setDoubleAppointmentPopup({
+                        heading: "Overlapping Appointment Alert!",
+                        title:
+                          "This time slot overlaps with another appointment for this employee.",
+                      })
+                    );
+                  }
+                }else{
+                  const confirmLocalAppointment = appointmentData?.map((i: any) => {
+                    const startTime = i?.empSvcBkgStartTime;
+                    const endTime = i?.empSvcBkgEndTime;
+                    const staffMember = i?.staffId;
+    
+                    if (values?.staff?.id == staffMember) {
+                      if (startTime > selectedTime) {
+                        const difference = dayjs(startTime, "HH:mm").diff(
+                          dayjs(selectedTime, "HH:mm"),
+                          "minute"
+                        );
+                        if (
+                          values?.services?.duration != undefined &&
+                          values?.services?.duration <= difference
+                        ) {
+                          return true;
+                        } else {
+                          return false;
+                        }
+                      } else {
+                        if (endTime > selectedTime) {
+                          return false;
+                        } else if (endTime == selectedTime) {
+                          return true;
+                        } else {
+                          return true;
+                        }
+                      }
+                    } else {
+                      return true;
+                    }
+                  });
+    
+                  if (
+                    confirmLocalAppointment.every((bool: boolean) => bool === true)
+                  ) {
+                    getAppointmentObject();
+                  } else {
+                    dispatch(
+                      setDoubleAppointmentPopup({
+                        heading: "Service Overlap Detected!",
+                        title:
+                          "This service time overlaps with another booked service in the same appointment.",
+                      })
+                    );
+                  }
+                }
+               
             }
+            );
           } else if (appointmentData?.length > 0) {
             {
+              
               const confirmLocalAppointment = appointmentData?.map((i: any) => {
-                const startTime = i?.startTime;
-                const endTime = i?.endTime;
+                const startTime = i?.empSvcBkgStartTime;
+                const endTime = i?.empSvcBkgEndTime;
                 const staffMember = i?.staffId;
 
                 if (values?.staff?.id == staffMember) {
@@ -279,6 +340,8 @@ export const AppointmentCreateDetails = ({
                   } else {
                     if (endTime > selectedTime) {
                       return false;
+                    } else if (endTime == selectedTime) {
+                      return true;
                     } else {
                       return true;
                     }
@@ -313,10 +376,19 @@ export const AppointmentCreateDetails = ({
             })
           );
         }
+
+        if (allSheduledData[0] == "absent") {
+          dispatch(
+            setDoubleAppointmentPopup({
+              heading: "Absence of employee",
+              title:
+                "Appointment Scheduling Unavailable Due to Absence of employee",
+            })
+          );
+        }
       }
     }
   }, [appointmentFilterData]);
-
   // const onAddAppointment = (values: AddAppointmentProps) => {
   //   if (values?.staff && values?.services && values?.startTime) {
   //     dispatch(
@@ -462,7 +534,7 @@ export const AppointmentCreateDetails = ({
 
           <button
             // type="submit"
-            className="add-new mt-3"
+            className="add-new mt-0"
             // onClick={(e) => {
             //   e.preventDefault();
             //   onAddAppointment(values);

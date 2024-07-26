@@ -1,9 +1,10 @@
 export const appointmentStatus: any = {
   pending: "Upcoming",
-  canceled: "Cancelled",
+  cancelled: "Cancelled",
   completed: "Completed",
   clientrejected: "Client Rejected",
   noshow: "No Show",
+  canceled:"Cancelled"
 };
 
 

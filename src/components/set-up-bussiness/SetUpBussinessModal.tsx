@@ -20,7 +20,7 @@ import {
   selectBussinessLoading,
 } from "../../redux/meta/selector";
 import CircularLoader from "../loading/CircularLoader";
-import { setUpBussinessAPI } from "../../redux/meta/action";
+import { fetchBussinessPreferenceList, setUpBussinessAPI } from "../../redux/meta/action";
 import { bussinessSetupRequest } from "../../utils/types/requestType";
 import { selectCurrentOutlet, selectOwnerData } from "../../redux/auth/selector";
 import { BsShop } from "react-icons/bs";
@@ -54,6 +54,11 @@ const SetUpBussinessModal = ({ open }: { open: boolean }) => {
     overflowY: "scroll",
     // p: 4,
   };
+
+  useEffect(() => {
+    dispatch(fetchBussinessPreferenceList(company_id));
+  }, [])
+  
 
   const validationSchema = Yup.object({
     startTime: requiredSchema("Start Time"),

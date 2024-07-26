@@ -43,6 +43,9 @@ import { useSearchParams } from "react-router-dom";
 import { useCurrentWeek } from "../hooks/useCurrentWeek";
 import translateLabel from "../hooks/translationLable";
 import { constantString } from "../../utils/constantString";
+import { setShowAlert } from "../../redux/meta/slice";
+import { frontendMessages } from "../../utils/messages";
+import { isTemplateMiddleOrTemplateTail } from "typescript";
 
 export const StaffSchedule = () => {
   const showStaffScheduleModal = useAppSelector(selectAddScheduleStaff);
@@ -173,8 +176,20 @@ export const StaffSchedule = () => {
         tabIndex={-1}
         checked={employeeData?.status == "leave" ? true : false}
         onChange={(e) => {
+          console.log("jfjfj");
+              
           const updatedAttendenceDate = rowData?.map((item: any) => {
             if (item?.day?.id == employeeData?.id) {
+              console.log("iii",item);
+              
+              if (item?.day?.apptBkgData && item?.day?.status === "present") {
+                dispatch(
+                  setShowAlert({
+                    message: `${frontendMessages?.LEAVE_APPLY} at ${dayjs(item?.date).format("DD-MM-YYYY")}`,
+                    type: "error",
+                  })
+                );
+              }
               const data = {
                 id: item?.day?.id,
                 status: e.target.checked ? "leave" : "present",

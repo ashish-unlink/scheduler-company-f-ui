@@ -255,3 +255,8 @@ export const messages: any = {
     message: constantMessages.INFO0045,
   },
 };
+
+
+export const frontendMessages = {
+  LEAVE_APPLY:'This user has an appointment today',
+}
