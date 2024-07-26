@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import { useAppDispatch, useAppSelector } from "../../redux";
 import {
   selectAppointmentFilterData,
-  selectData,
   selectSuccessedAppointmentLoading,
 } from "../../redux/appointment/selector";
 import "./attendenceStyle.css";
@@ -24,10 +23,11 @@ import { useCompanyData } from "../../components/hooks/useCompanyData";
 import { ResopnseAppointmentBlockData } from "../../utils/types/responseType";
 import { attendenceStatus } from "../../utils/primtive/status";
 import { updateAttendenceAPI } from "../../redux/staff/action";
+import { setShowAlert } from "../../redux/meta/slice";
+import { frontendMessages } from "../../utils/messages";
 
 export const Attendence = () => {
   const { t } = useTranslation();
-  const data = useAppSelector(selectData);
   const dispatch = useAppDispatch();
   const employeeList = useAppSelector(selectEmployeeList);
   const companyId = useCompanyData();
@@ -61,6 +61,7 @@ export const Attendence = () => {
           lastName: i?.employee?.lastName,
           attendenceDate: dayjs(i?.date),
           status: i?.status == "leave" ? true : false,
+          apptBkgData: i?.apptBkgData,
         };
         temp?.push(data);
       }
@@ -130,6 +131,14 @@ export const Attendence = () => {
                 let updatedShowData: any = [];
                 const updatedDate = attendenceList?.map((item: any) => {
                   if (item?.id == props?.row?.id) {
+                    if (item?.apptBkgData && !item?.status) {
+                      dispatch(
+                        setShowAlert({
+                          message: `${frontendMessages?.LEAVE_APPLY} at ${dayjs(item?.attendenceDate).format("DD-MM-YYYY")}`,
+                          type: "error",
+                        })
+                      );
+                    }
                     updatedShowData.push({
                       ...item,
                       status: e.target.checked,

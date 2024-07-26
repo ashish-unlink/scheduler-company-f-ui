@@ -170,7 +170,7 @@ const AddCustomer = () => {
           
             <center>
                 <button className="mt-3 bg-orange button white verify">
-                  {editCustomer ? t(constantString.UPDATE_CUSTOMER) : t(constantString.ADD_CUSTOMER)}
+                  { t(constantString.SAVE) }
                 </button>
               </center>
           </div>

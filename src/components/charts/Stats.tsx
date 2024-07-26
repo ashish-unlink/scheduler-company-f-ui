@@ -37,7 +37,7 @@ export default function Stats() {
   const getCancelPrice = () => {
     let count = 0;
     appointmentData?.map((i: ResponseAppointment) => {
-      if (i?.status == "canceled") {
+      if (i?.status == "canceled" || i?.status == "clientrejected" || i?.status == "noshow" ) {
         count = count + parseInt(i?.priceFinal);
       }
     });

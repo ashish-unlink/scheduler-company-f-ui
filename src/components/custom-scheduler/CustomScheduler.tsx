@@ -157,21 +157,21 @@ const CustomScheduler = () => {
       title: "Staff",
       instances:
         employeeIds?.length > 0
-          ? staffMembers?.filter((i: UserStaffs) => {
-              return (
-                employeeIds?.includes(i?.id) &&
-                i?.isEmplPermanent === true &&
-                i?.status === "active" &&
-                !employeeLeaveStatus?.includes(i?.id)
-              );
-            }) || []
-          : staffMembers?.filter((i: UserStaffs) => {
-              return (
-                i?.isEmplPermanent === true &&
-                i?.status === "active" &&
-                !employeeLeaveStatus?.includes(i?.id)
-              );
-            }) || [],
+        ? staffMembers?.filter((i: UserStaffs) => {
+            return (
+              employeeIds?.includes(i?.id) &&
+              i?.isEmplPermanent === true &&
+              i?.status === "active" &&
+              !employeeLeaveStatus?.includes(i?.id)
+            );
+          }) || []
+        : staffMembers?.filter((i: UserStaffs) => {
+            return (
+              i?.isEmplPermanent === true &&
+              i?.status === "active" &&
+              !employeeLeaveStatus?.includes(i?.id)
+            );
+          }) || [],
 
       allowMultiple: true,
     },
@@ -216,7 +216,7 @@ const CustomScheduler = () => {
     if (selectFilterData?.length > 0) {
       var temp: string[] = [];
       selectFilterData.forEach((item: ResopnseAppointmentBlockData) => {
-        if (item?.status == "leave") {
+        if (item?.status == "leave" && item?.apptBkgData == null) {
           temp?.push(item?.employeeId);
         }
       });

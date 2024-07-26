@@ -127,6 +127,7 @@ const AddServiceModal = ({ open }: { open: boolean }) => {
             onClose={() => {
               dispatch(setShowSubCategoryModal(false));
               dispatch(setSelectedSubCategoryItem(null));
+              dispatch(setSelectedCategoryItem(null));
             }}
           >
             <b>

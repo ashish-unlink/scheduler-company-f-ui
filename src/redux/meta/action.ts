@@ -8,7 +8,7 @@ import {
 } from "../../utils/types/responseType";
 import { apiSignature } from "./api-signature";
 import { bussinessSetupRequest } from "../../utils/types/requestType";
-import { setSettingBussinessSetUP } from "./slice";
+import { setSettingBussinessSetUP, setShowAlert } from "./slice";
 import { setCountData } from "../auth/slice";
 import { checkMessage } from "../../utils/general";
 
@@ -73,6 +73,7 @@ export const setUpBussinessAPI = createAsyncThunk<void, bussinessSetupRequest>(
         );
         dispatch(setSettingBussinessSetUP(false));
         dispatch(fetchBussinessPreferenceList(companyId));
+        dispatch(setShowAlert({message:response?.message,type:"success"}))
         return result;
       }
     } catch (error) {
