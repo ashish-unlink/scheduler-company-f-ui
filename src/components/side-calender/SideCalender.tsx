@@ -121,7 +121,7 @@ export const SideCalender = () => {
                           navigate(
                             `${PrivatePath?.analytics}?dt=${dayjs(
                               dateValue
-                            ).format("YYYY-MM-DD")}&status=${key}`
+                            ).format("YYYY-MM-DD")}&status=${key === "cancelled" ? "canceled" : key}`
                           );
                         }}
                       >
