@@ -37,7 +37,7 @@ const Header = () => {
   return (
     <AppBar
       position="fixed"
-      style={{ background: "#254007", color: "#fff" }}
+      style={{ background: "#rgb(116, 105, 182)", color: "#fff" }}
       sx={{
         width: `calc(100% - ${drawerWidth}px)`,
         ml: `${drawerWidth}px`,
