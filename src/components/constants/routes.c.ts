@@ -13,6 +13,6 @@ export const PrivatePath = {
 };
 export const PublicPath = {
   login: "/login",
-  register: "/sign-up",
+  // register: "/sign-up",
   userVerify:"/user-verify"
 };

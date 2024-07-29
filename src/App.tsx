@@ -46,14 +46,14 @@ const App = () => {
           }
         />
         
-        <Route
+        {/* <Route
           path={PublicPath.register}
           element={
             <PublicRoute>
               <Register />
             </PublicRoute>
           }
-        />
+        /> */}
 
         <Route
           path={PublicPath.userVerify}
