@@ -79,6 +79,9 @@ export interface addSubCategoryRequest {
   catalogueId: String;
   description: string;
   status: "active" | "inactive";
+  image?:string;
+  base64Data:string | null,
+  photoFilename:string
 }
 
 export interface SearchPopupRequest {
