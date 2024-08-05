@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import CustomPopup from "../../custom-popup/CustomPopup";
 import AppointmentPopupHeader from "../../components/appointment-popup/AppointmentPopupHeader";
 import AppointmentTextField from "../../components/appointment-popup/AppointmentTextField";
@@ -42,6 +42,7 @@ import { useCountryCurrency } from "../hooks/useCountryCurrency";
 import { useTranslation } from "react-i18next";
 import { useCompanyData } from "../hooks/useCompanyData";
 import { MultiSelectAutoComplete } from "../user-list-dropdown";
+import { ImageUploader } from "../image-uploader/ImageUploader";
 
 const AddServiceModal = ({ open }: { open: boolean }) => {
   const dispatch = useAppDispatch();
@@ -51,6 +52,8 @@ const AddServiceModal = ({ open }: { open: boolean }) => {
   const currencySymbol = useCountryCurrency();
   const company_id = useCompanyData();
   const categoryList = useAppSelector(selectServiceList);
+  const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const [selectedFile, setSelectedFile] = useState<string>('');
 
   const { t } = useTranslation();
 
@@ -80,6 +83,7 @@ const AddServiceModal = ({ open }: { open: boolean }) => {
     serviceEnableForAppointment:
       selectedSubCategoryItem?.status == "inactive" ? false : true,
     catgeory: selectedCategoryData ?? "",
+    selectedFile: selectedSubCategoryItem?.selectImage ?? null,
   };
 
   const formik = useFormik({
@@ -93,8 +97,10 @@ const AddServiceModal = ({ open }: { open: boolean }) => {
         duration: parseInt(values.time),
         companyId: company_id,
         catalogueId: selectedCategoryData?.id,
-        description: values?.description,
+        ...( values?.description && {description: values?.description}),
         status: values?.serviceEnableForAppointment ? "active" : "inactive",
+        photoFilename:selectedFile,
+        base64Data:previewUrl,
       };
       selectedSubCategoryItem
         ? dispatch(
@@ -199,6 +205,24 @@ const AddServiceModal = ({ open }: { open: boolean }) => {
                 mandatory={true}
                 error={touched.price && errors.price}
               />
+            </div>
+
+            <div className="wrap-sub-category image-button">
+              <ImageUploader
+                setSelectedFile={(fileName: string) => {
+                  setSelectedFile(fileName)
+                }}
+                setPreviewUrl={(base64)=>{
+                  setPreviewUrl(base64)
+                }}
+                // error={touched.selectedFile && errors.selectedFile}
+              />
+            </div>
+
+            <div className="wrap-sub-category">
+              {previewUrl && (
+                <img src={previewUrl} alt="preview" width={150} height={150} style={{objectFit:'cover'}}/>
+              )}
             </div>
 
             <div className="subcategory-checkbox-wrap wrap-sub-category">

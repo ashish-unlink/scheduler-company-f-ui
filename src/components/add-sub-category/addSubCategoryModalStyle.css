@@ -40,3 +40,10 @@
   justify-content: left;
   align-items: center;
 }
+
+
+
+.image-button > label{
+  display: flex !important;
+  width: 250px;
+}
