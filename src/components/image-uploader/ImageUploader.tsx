@@ -57,7 +57,7 @@ export const ImageUploader = ({
         startIcon={<CloudUploadIcon />}
       >
         Upload file
-        <VisuallyHiddenInput type="file" />
+        <VisuallyHiddenInput type="file"  onChange={handleFileSelect}/>
       </Button>
     
       {error || showError ? <p className="error-text">{error || showError}</p> : null}
