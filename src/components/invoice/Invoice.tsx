@@ -3,7 +3,7 @@ import CustomPopup from "../../custom-popup/CustomPopup";
 import AppointmentPopupHeader from "../appointment-popup/AppointmentPopupHeader";
 import { setAppointmentInvoice } from "../../redux/appointment/slice";
 import { useAppDispatch, useAppSelector } from "../../redux";
-import { ResponseAppointment } from "../../utils/types/responseType";
+import { ResponseAppointment, ServiceBookedAppointment } from "../../utils/types/responseType";
 import { getFormattedDate, sortComments, userName } from "../../utils/general";
 import "./invoiceStyle.css";
 import CustomTable from "../custom-table/CustomTable";
@@ -33,16 +33,24 @@ export const Invoice = ({
   const appointmentData = useAppSelector(selectAppointmentApiData);
   const [appointmentDetails, setAppointmentDetails] =
     useState<ResponseAppointment>();
+    const [finalPrice, setFinalPrice] =
+    useState(0);
 
   useEffect(() => {
     if (selectedData) {
       const data = appointmentData?.find((i: ResponseAppointment) => {
         return i?.id == selectedData?.appointmentId;
       });
+      let sum = 0;
+      data?.servicesBooked?.forEach((element:ServiceBookedAppointment) => {
+        if(element?.svcCtlgItems){
+          sum = sum + parseFloat(element?.svcCtlgItems?.price);
+        }
+      });
+      setFinalPrice(sum)
       setAppointmentDetails(data);
     }
   }, []);
-
   const customStyle = {
     position: "absolute",
     top: "0",
@@ -195,7 +203,7 @@ export const Invoice = ({
             </p>
             <p className="invoice-text">
               {translateLabel(appointmentSuccessColumns.TOTAL_AMOUNT)}:{" "}
-              {format(parseInt(appointmentDetails?.priceFinal))}
+              {format(finalPrice)}
             </p>
           </div>
         </div>
