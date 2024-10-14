@@ -167,7 +167,7 @@ const AddServiceModal = ({ open }: { open: boolean }) => {
                 placeholder="Ex. Hair spa"
                 onChange={handleChange}
                 value={values.sub_category_name}
-                maxLength={50}
+                maxLength={200}
                 onBlur={handleBlur}
                 mandatory={true}
                 error={
@@ -255,7 +255,7 @@ const AddServiceModal = ({ open }: { open: boolean }) => {
                   paddingTop: "15px",
                   paddingRight: "20px",
                 }}
-                maxLength={150}
+                maxLength={1000}
               />
             </div>
 

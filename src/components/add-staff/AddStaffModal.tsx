@@ -72,15 +72,15 @@ const AddStaffModal = ({ open }: { open: boolean }) => {
     first_name: nameSchema("First Name"),
     last_name: nameSchema("Last Name"),
     email: emailSchema(),
-    mobile: customerPhoneSchema(),
+    // mobile: customerPhoneSchema(),
     // employee_code: requiredSchema("Employee Code"),
     gender: genderSchema(),
-    dob: requiredSchema("DOB"),
-    permanent_street: requiredSchema("Current street"),
-    permanent_city: requiredSchema("Current City"),
-    permanent_state: requiredSchema("Current State"),
-    permanent_zipcode: zipCodeSchema(),
-    permanent_country: requiredSchema("Current Country"),
+    // dob: requiredSchema("DOB"),
+    // permanent_street: requiredSchema("Current street"),
+    // permanent_city: requiredSchema("Current City"),
+    // permanent_state: requiredSchema("Current State"),
+    // permanent_zipcode: zipCodeSchema(),
+    // permanent_country: requiredSchema("Current Country"),
   });
 
   const initialValues = {
@@ -257,7 +257,7 @@ const AddStaffModal = ({ open }: { open: boolean }) => {
                   onBlur={handleBlur}
                   value={values.mobile}
                   error={touched.mobile && errors.mobile}
-                  mandatory
+                  // mandatory
                 />
               </div>
               <div className="staff-input-wrap">
@@ -285,7 +285,7 @@ const AddStaffModal = ({ open }: { open: boolean }) => {
                   value={dayjs(values.dob)}
                   onBlur={handleBlur}
                   error={touched.dob && errors.dob && errors.dob}
-                  mandatory
+                  // mandatory
                 />
               </div>
               {/* <div className="staff-input-wrap top-margin">
@@ -400,7 +400,7 @@ const AddStaffModal = ({ open }: { open: boolean }) => {
                   value={values.permanent_street}
                   onBlur={handleBlur}
                   error={touched.permanent_street && errors.permanent_street}
-                  mandatory
+                  // mandatory
                 />
               </div>
               <div className="staff-input-wrap">
@@ -412,7 +412,7 @@ const AddStaffModal = ({ open }: { open: boolean }) => {
                   value={values.permanent_city}
                   onBlur={handleBlur}
                   error={touched.permanent_city && errors.permanent_city}
-                  mandatory
+                  // mandatory
                 />
               </div>
               <div className="staff-input-wrap">
@@ -424,7 +424,7 @@ const AddStaffModal = ({ open }: { open: boolean }) => {
                   value={values.permanent_state}
                   onBlur={handleBlur}
                   error={touched.permanent_state && errors.permanent_state}
-                  mandatory
+                  // mandatory
                 />
               </div>
               <div className="staff-input-wrap">
@@ -437,7 +437,7 @@ const AddStaffModal = ({ open }: { open: boolean }) => {
                   onBlur={handleBlur}
                   maxLength={7}
                   error={touched.permanent_zipcode && errors.permanent_zipcode}
-                  mandatory
+                  // mandatory
                 />
               </div>
               <div className="staff-input-wrap">
@@ -449,7 +449,7 @@ const AddStaffModal = ({ open }: { open: boolean }) => {
                   onChange={handleChange}
                   value={values.permanent_country}
                   error={touched.permanent_country && errors.permanent_country}
-                  mandatory
+                  // mandatory
                 />
               </div>
             </div>
